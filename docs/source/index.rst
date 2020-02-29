@@ -3,12 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Maritime Connectivity Platform's documentation!
+Maritime Connectivity Platform (MCP) documentation
 ==========================================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   gettingStarted
+   basicConcept
+   terminology
+   reference
 
 
 
