@@ -2,7 +2,7 @@ Maritime Connectivity Platform (MCP) documentation
 ==========================================================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    gettingStarted
    basicConcept
