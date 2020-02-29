@@ -7,10 +7,9 @@ Maritime Connectivity Platform (MCP) documentation
 ==========================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    gettingStarted
    basicConcept
-   terminology
    reference
 
 
