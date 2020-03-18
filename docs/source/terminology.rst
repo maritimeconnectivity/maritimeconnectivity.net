@@ -70,7 +70,7 @@ Vessels describes any floating object used for the carriage of people or goods. 
 
 Identity
 ============================
-The set of attributes that uniquely identifies a security principal. A security principal can have many different accounts that it uses to access various applications in the network. These accounts can be identified by these applications using different attributes of this entity. For example, a user can be known in the e-mail service by an e-mail ID, whereas that same user can be known in the human resource application by an employee number. The global set of such attributes constitutes the identity of the entity. (from white paper of Identity Management and Cyber Security)
+The set of attributes that uniquely identifies a security principal. A security principal can have many different accounts that it uses to access various applications in the network. These accounts can be identified by these applications using different attributes of this entity. For example, a user can be known in the e-mail service by an e-mail ID, whereas that same user can be known in the human resource application by an employee number. The global set of such attributes constitutes the identity of the entity.
 
 Maritime Resource Name (MRN)
 ============================
@@ -92,6 +92,18 @@ Authorization
 =============
 The process of establishing a specific entitlement that is consistent with authorization policies. (from white paper of Identity Management and Cyber Security)
 
+Authorization policies
+======================
+Declarations that define entitlements of a security principal and any constraints related to that entitlement.
+
+Entitlements
+=============
+The actions an entity in a network is allowed to perform and the resources to which it is allowed access.
+
+Federated identity
+===================
+Is the means of linking a person’s electronic identity and attributes, stored across multiple distinct identity management systems
+
 Public Key Infrastructure (PKI)
 ===============================
 A public key infrastructure (PKI) is a set of roles, policies, hardware, software and procedures needed to create, manage, distribute, use, store and revoke digital certificates and manage public-key encryption. The purpose of a PKI is to facilitate the secure electronic transfer of information for a range of network activities such as e-commerce, internet banking and confidential email. It is required for activities where simple passwords are an inadequate authentication method and more rigorous proof is required to confirm the identity of the parties involved in the communication and to validate the information being transferred. (from Wikipedia https://en.wikipedia.org/wiki/Public_key_infrastructure)
@@ -99,6 +111,22 @@ A public key infrastructure (PKI) is a set of roles, policies, hardware, softwar
 Open ID Connect (OIDC)
 ======================
 OpenID Connect is a simple identity layer on top of the OAuth 2.0 protocol, which allows computing clients to verify the identity of an end-user based on the authentication performed by an authorization server, as well as to obtain basic profile information about the end-user in an interoperable and REST-like manner. In technical terms, OpenID Connect specifies a RESTful HTTP API, using JSON as a data format. (from Wikipedia https://en.wikipedia.org/wiki/OpenID_Connect)
+
+Identity administration
+=======================
+The act of managing information associated with the identity of a security principal. The information can be used by the identity management infrastructure itself to determine administrative privileges.
+
+Identity management policies
+============================================
+Policies affecting the management of identities which includes naming policies and security policies.
+
+Realm
+=====
+A collection of identities and associated policies which is typically used when enterprises want to isolate user populations and enforce different identity management policies for each population.
+
+Security principals
+===================
+The subjects of authorization policies, such as users, user groups, and roles. A security principal can be a human or any application entity with an identity in the network and credentials to assert the identity.
 
 Almanac
 ========================================================================================================================
