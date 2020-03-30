@@ -4,14 +4,21 @@ MIR is an authority for identities of persons, organizations or ships that are u
 [Distributed MIR]
 The main technical components enabling MIR are:
 
-* Public Key Infrastructure (PKI)
-* Open ID Connect (OIDC)
+* MIR API: https://github.com/MaritimeConnectivityPlatform/IdentityRegistry
+* MIR Identity Broker: https://github.com/MaritimeConnectivityPlatform/MCPKeycloakSpi
 
-MIR itself can be described as a RESTful API for authorization and management of entities in MCP.
-[OIDC as Authenticating API]
-%The Identity Broker provides links to trusted Identity Providers, owned by maritime organizations that wish to connect its users to MCP. Within the scope of the EfficienSea 2 and STM validation projects, a special Identity Provider is available where organizations can create users without linking their own Identity Provider.
-[Federation of MCP]
-%This will enable the participants in the projects to register actors to validate specific service concepts in testbed trials or utilize the operational services established by the projects, as well as validate the identity management concept of MCP. Beyond the scope of the project, it is foreseen that several identity registers will collaborate to form the global federated MCP Identity Registry.
+Both use the special MCP-PKI library for handling certificates: https://github.com/MaritimeConnectivityPlatform/MCP-PKI
+
+MIR itself can be described as a RESTful API for managing maritime entity identities and PKI.
+MIR API uses ID Broker for OIDC token-based user authentication.
+After the authorization, the user can register and manage the entities through the MIR API, with a proper right what we defined as a role.
+One important feature on the management is to issue or revoke a X509 client certificate for entities that are already registered in the API database.
+
+MIR Identity Broker is based on `Keycloak <https://www.keycloak.org/>`__ which is an OpenID Connect (OIDC) server developed by Red Hat, but including two MCP specific plugins for synchronization of user data with MIR API and converting MCP client certificates to OIDC tokens.
+Giving a detailed account of the synchronization part when the API is called to create a new user with corresponding information it is registered in the API database and also the ID Broker accounts.
+The synchronization is provoked when a user logs in using an external identity provider by registering the user’s information to the API database.
+As long as the external identity provider follows OAuth 2.0, it can be configured as the federation of identity providers.
+In our testbed we use the federation to enable the participants across different projects to register and utilize MCP services established by the projects, as well as validate the identity management concept of MCP.
 
 Identity Management
 ^^^^^^^^^^^^^^^^^^^
