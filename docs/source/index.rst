@@ -24,7 +24,7 @@ Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritime
    MMS
    gettingStarted
    useTestbed
-   runOwnMIR
+   setupMIR
    terminology
    reference
 
