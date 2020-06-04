@@ -16,15 +16,7 @@ MCP expects the following attributes in the OpenID Connect JWT Access Token:
 
 These attributes will be directly mapped from attributes provided by the organizations Identity Provider, so the Identity Provider must also provide these attributes, except for the "org"-attribute.
 
-Authentication Flow
-^^^^^^^^^^^^^^^^^^^
-To illustrate the authentication flows the sequence diagrams below is provided.
-
-The first diagram below shows the standard `OpenID Connect Authorization Code Flow <http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth>`__ involving a browser being used by the user to access a service in the form of a webpage.
-
-The second diagram shows the flow used when an authenticated user is accessing a backend service. For browser based services this scenario is often used when the browser retrieves data from backend services. In this scenario since the user is authenticated, the user has a token that is presented for authentication for the backend service.
-
-Keycloack
+Keycloak
 ^^^^^^^^^^
 Keycloak is one of many products that includes support for OpenID Connect, and it is the product that currently provides MCP Identity Broker which is the cornerstone in MCP user federation.
 

@@ -9,7 +9,7 @@ The main technical components enabling MIR are:
 
 Both use the special MCP-PKI library for handling certificates: https://github.com/MaritimeConnectivityPlatform/MCP-PKI
 
-MIR itself can be described as a RESTful API for managing maritime entity identities and PKI.
+MIR itself can be described as a RESTful API for managing maritime identities and PKI.
 MIR API uses ID Broker for OIDC token-based user authentication.
 After the authorization, the user can register and manage the entities through the MIR API, with a proper right what we defined as a role.
 One important feature on the management is to issue or revoke a X509 client certificate for entities that are already registered in the API database.

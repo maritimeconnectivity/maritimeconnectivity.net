@@ -3,9 +3,9 @@ Maritime Connectivity Platform (MCP) documentation
 
 This documentation describes Maritime Connectivity Platform from the overall architecture to the technical details of the MCP reference implementation.
 
-We encourage you to use our Google Group at https://groups.google.com/forum/#!forum/maritimeconnectivity for general usage questions and new releases.
+This primarily aims to cover the technical parts of MCP. If you are not familiar with MCP we encourage you to read `MCP official webpage <https://maritimeconnectivity.net/>`__ that gives the idea of MCP in more high level.
 
-This document aims to make you familiar with developing secure applications and services for MCP in particular.
+Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritimeconnectivity>`__ for general usage questions and new releases.
 
 
 .. toctree::
@@ -16,6 +16,7 @@ This document aims to make you familiar with developing secure applications and 
    MCPEntity
    authentication
    authorization
+   MCPInstanceProvider
    MIR
    PKI
    certificate
@@ -24,7 +25,14 @@ This document aims to make you familiar with developing secure applications and 
    MMS
    gettingStarted
    useTestbed
-   runOwnMIR
+   setupMIR
+   setupMSR
+   setupMMS
+   setupKC
+   setupNGINX
+   setupPKI
+   setupDatabase
+   connectOwnMIR
    terminology
    reference
 

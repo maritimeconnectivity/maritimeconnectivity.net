@@ -16,6 +16,7 @@ Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritime
    MCPEntity
    authentication
    authorization
+   MCPInstanceProvider
    MIR
    PKI
    certificate
@@ -25,6 +26,13 @@ Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritime
    gettingStarted
    useTestbed
    setupMIR
+   setupMSR
+   setupMMS
+   setupKC
+   setupNGINX
+   setupPKI
+   setupDatabase
+   connectOwnMIR
    terminology
    reference
 
