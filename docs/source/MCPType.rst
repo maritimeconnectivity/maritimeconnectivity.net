@@ -1,11 +1,12 @@
-MCP Entities
+<MIR consists of hierarchy>
+
+MCP Type
 ===============
 In order to be able to describe some of the concepts we are working with, here is a short introduction of the various actors we envision will interact with the identity registry.
 
 Identity management and security is a very complex and comprehensive field. So wherever possible we must limit non-essential functionality. So clearly, there are some maritime entities that should not be a part of the identity registry. Therefore, the Identity Registry should not be:
 
 * Managing information about entities that does not need to have access rights. For example, route or container information. While information about routes can be accessed by various users and systems. Routes by them self does not need access rights to access other information. It is only users and systems/devices that need access right.
-
 * Maintaining information about entities that are not security related. For example, business addresses of users and organizations. Or location information about entities that can be used, for example, for routing messages to the right location.
 
 The main reason for excluding all but non-essential security related information is that it opens up the never ending discussion about what exactly should be maintained in the identity registry. If we make a generalized information store that maintains and provides query capabilities for all kinds of information about users and systems/devices. For example, business addresses, geographical location. We might as well use this functionality for storing other queryable information. For example, maintaining information about routes or cargo.
@@ -14,7 +15,7 @@ This does not prohibit a later revisiting of these goals. Or prohibit including 
 
 Organization
 ^^^^^^^^^^^^
-In MCP an organization is an entity, such as an institution, company or an association, that has a collective goal and is linked to an external environment. Examples, include international organizations such as IMO, IALA, IHO. National authorities such as US Coastguard, Swedish Maritime Administration. Local authorities such as VTS-Oeresund, Port of Rotterdam, Hong Kong SAR. Or commercial companies such as Transas or Maris.
+In MCP an organization is an entity of an MCP Instance Provider, such as an institution, company or an association, that has a collective goal and is linked to an external environment. Examples, include international organizations such as IMO, IALA, IHO. National authorities such as US Coastguard, Swedish Maritime Administration. Local authorities such as VTS-Oeresund, Port of Rotterdam, Hong Kong SAR. Or commercial companies such as Transas or Maris.
 
 In order to be able to use the functions of MCP in any way, an organization needs to be signed up to MCP. In the context of the EfficienSea 2.0 and STM projects, this is currently done be sending an email with various information about the organization to a MCP test bed administrator.
 

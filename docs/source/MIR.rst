@@ -1,7 +1,6 @@
 Maritime Identity Registry (MIR)
 ================================
 MIR is an authority for identities of persons, organizations or ships that are using the MCP.
-[Distributed MIR]
 The main technical components enabling MIR are:
 
 * MIR API: https://github.com/MaritimeConnectivityPlatform/IdentityRegistry
@@ -20,6 +19,8 @@ The synchronization is provoked when a user logs in using an external identity p
 As long as the external identity provider follows OAuth 2.0, it can be configured as the federation of identity providers.
 In our testbed we use the federation to enable the participants across different projects to register and utilize MCP services established by the projects, as well as validate the identity management concept of MCP.
 
+[Configuration manual (third party dependencies of reference implementation)]
+
 Identity Management
 ^^^^^^^^^^^^^^^^^^^
 Identity management refers to the process of employing technologies to manage information about the identity of users and control access to company resources. The goal of identity management is to improve productivity and security while lowering costs associated with managing users and their identities, attributes, and credentials.
@@ -35,3 +36,11 @@ In the previous section we discussed digital certificates for use in machine to 
 Federation is the means of linking distinct identity management systems to a person’s electronic identity and attributes. For example, a shipping company might expose all their users in LDAP or Active Directory to MCP in such a way as they appear as MCP users. Thereby bypassing the need to manage their users directly in MCP. This also means that MCP is not responsible for management of users. In practical terms, federation means that users asked to authenticate in MCP will be redirected to a login webpage supplied by their organization where they can login using their organizational id.
 
 Since the authentication process is the responsibility of the organizations, it is also up to the individual organizations to choose an appropriate authentication method. While most will likely use classic username/password authentication, multi factor security, biometric security or other approaches could be used.
+
+What MCC governs in MIR
+^^^^^^^^^^^^^^^^^^^^^^^
+* MCP types and its hierarchy
+* PKI certificate profile
+* OIDC Token
+* REST API
+* MCP Instance Provider root CA list

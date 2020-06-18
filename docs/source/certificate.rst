@@ -66,7 +66,7 @@ Encoding of string values in certificates must follow the specifications defined
 
 Revocation
 ^^^^^^^^^^
-A crucial part of any PKI is to support revocation of certificates, so that certificates that belongs to entities who is no longer trusted, affiliation has change, etc., can be mark as not trusted any more. Anyone who wishes to validate a certificate can then check if the certificate has been marked as revoked. The checking of the certificate revocation status can be done in two ways::
+A crucial part of any PKI is to support revocation of certificates, so that certificates that belongs to entities who is no longer trusted, affiliation has change, etc., can be mark as not trusted any more. Anyone who wishes to validate a certificate can then check if the certificate has been marked as revoked. The checking of the certificate revocation status can be done in two ways:
 
 1. Call the OCSP interface provided by the Identity Registry for each certificate.
 2. Periodically download a Certificate Revocation File from the Identity Registry and use it check certificates locally.

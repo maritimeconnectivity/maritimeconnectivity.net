@@ -14,7 +14,7 @@ An international association that governs standards, reference implementations, 
 
 Maritime Identity Registry (MIR)
 ========================================================================================================================
-Technical MCP core component enabling an authentication of all maritime stakeholders in the context of the Maritime Connectivity Platform and thus increasing the security and reliability of communication (from D3.7 Technical Specification)
+Technical MCP core component enabling an authentication of all maritime stakeholders in the context of the MCP and thus increasing the security and reliability of communication (from D3.7 Technical Specification)
 
 Maritime Service Registry (MSR)
 ========================================================================================================================

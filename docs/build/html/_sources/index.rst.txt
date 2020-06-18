@@ -8,12 +8,33 @@ This primarily aims to cover the technical parts of MCP. If you are not familiar
 Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritimeconnectivity>`__ for general usage questions and new releases.
 
 
+For readers who want to know MCP
+
+For readers who want to try MCP at MCP testbed
+-> Querying MSR
+
+For readers who want to run an MCP instance
+ - on your machine
+ - as MCP instance provider
+
+For readers who want to use MCP services
+
+For readers who want to register your entities to MCP
+
+For readers who want to register your MCP service
+
+<API document - swagger OpenAPI standard>
+<Cert profile mandatory>
+<What MCC governs>
+
+
 .. toctree::
    :maxdepth: 1
 
    basicConcept
+   MCC
    history
-   MCPEntity
+   MCPType
    authentication
    authorization
    MCPInstanceProvider
@@ -32,7 +53,6 @@ Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritime
    setupNGINX
    setupPKI
    setupDatabase
-   connectOwnMIR
    terminology
    reference
 

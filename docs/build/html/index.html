@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maritime Connectivity Platform (MCP) documentation &#8212; Maritime Connectivity Platform 0.11.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,11 +37,28 @@
 <p>This documentation describes Maritime Connectivity Platform from the overall architecture to the technical details of the MCP reference implementation.</p>
 <p>This primarily aims to cover the technical parts of MCP. If you are not familiar with MCP we encourage you to read <a class="reference external" href="https://maritimeconnectivity.net/">MCP official webpage</a> that gives the idea of MCP in more high level.</p>
 <p>Please refer <a class="reference external" href="https://groups.google.com/forum/#!forum/maritimeconnectivity">our Google Group</a> for general usage questions and new releases.</p>
+<p>For readers who want to know MCP</p>
+<p>For readers who want to try MCP at MCP testbed
+-&gt; Querying MSR</p>
+<dl class="simple">
+<dt>For readers who want to run an MCP instance</dt><dd><ul class="simple">
+<li><p>on your machine</p></li>
+<li><p>as MCP instance provider</p></li>
+</ul>
+</dd>
+</dl>
+<p>For readers who want to use MCP services</p>
+<p>For readers who want to register your entities to MCP</p>
+<p>For readers who want to register your MCP service</p>
+<p>&lt;API document - swagger OpenAPI standard&gt;
+&lt;Cert profile mandatory&gt;
+&lt;What MCC governs&gt;</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="basicConcept.html">Basic Concept</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MCC.html">MCP Consortium (MCC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MCPEntity.html">MCP Entities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MCPType.html">MCP Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authentication.html">Authentication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authorization.html">Authorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MCPInstanceProvider.html">MCP Instance Provider</a></li>
@@ -52,14 +70,13 @@
 <li class="toctree-l1"><a class="reference internal" href="MMS.html">Maritime Messaging Service (MMS)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingStarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useTestbed.html">Using MCP Testbed</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setupMIR.html">Setting up the MCP Identity Registry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setupMIR.html">Setting up MIR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupMSR.html">Running Your Own MSR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupMMS.html">Running Your Own MMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupKC.html">Setting up Keycloak</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupNGINX.html">Setting up NGINX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupPKI.html">Setting up PKI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupDatabase.html">Setting up database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="connectOwnMIR.html">Running Your Own MIR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terminology.html">MCP Terminology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
 </ul>
@@ -93,8 +110,9 @@
 <h3>Navigation</h3>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="basicConcept.html">Basic Concept</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MCC.html">MCP Consortium (MCC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MCPEntity.html">MCP Entities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MCPType.html">MCP Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authentication.html">Authentication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authorization.html">Authorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MCPInstanceProvider.html">MCP Instance Provider</a></li>
@@ -106,14 +124,13 @@
 <li class="toctree-l1"><a class="reference internal" href="MMS.html">Maritime Messaging Service (MMS)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingStarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useTestbed.html">Using MCP Testbed</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setupMIR.html">Setting up the MCP Identity Registry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setupMIR.html">Setting up MIR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupMSR.html">Running Your Own MSR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupMMS.html">Running Your Own MMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupKC.html">Setting up Keycloak</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupNGINX.html">Setting up NGINX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupPKI.html">Setting up PKI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupDatabase.html">Setting up database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="connectOwnMIR.html">Running Your Own MIR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terminology.html">MCP Terminology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
 </ul>
@@ -152,7 +169,7 @@
       &copy;2020, Maritime Connectivity Platform Consortium.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
