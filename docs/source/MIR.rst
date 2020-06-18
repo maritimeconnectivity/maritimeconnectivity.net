@@ -1,6 +1,6 @@
 Maritime Identity Registry (MIR)
 ================================
-MIR is an authority for identities of persons, organizations or ships that are using the MCP.
+Maritime Identity Registry (MIR for short) is an authority for identities of persons, organizations or ships that are using the MCP.
 The main technical components enabling MIR are:
 
 * MIR API: https://github.com/MaritimeConnectivityPlatform/IdentityRegistry

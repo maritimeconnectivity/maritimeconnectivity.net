@@ -1,7 +1,24 @@
+.. _mcp-instance-provider:
+
 MCP Instance Provider
 ================================
-will be described..
+An MCP instance provider is an organization which takes responsibility of operating an MCP instance.
+An MCP instance is a number of environments of running MCP software.
+The MCP software is a software that meets the requirements set forth by the Maritime Connectivity platform Consortium (MCC).
+MCP software comprises three main components; MIR (Maritime Identity Registry), MSR (Maritime Service Registry) or MMS (Maritime Messaging Service). The MIR itself has two subcomponents; the MIR PKI and the MIR OIDC broker.
 
-How to be a MCP Instance Provider?
+An MCP environment is either a
+
+* Running MIR PKI
+* Running MIR PKI and MIR OIDC
+* Running MSR
+* Running MMS
+
+Or any combination hereof.
+
+An instance provider will always be running several environments - at least a staging and production environment, which is required by the system configuration requirements (see later). Most instance providers will typically have the need to run even more environments than that.
+Any MCP instance running environments consisting of only an MMS and/or MSR environments without a MIR component will need to rely on another MCP instance with a running MIR for authentication purpose.
+
+How to be an MCP Instance Provider
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-will be described..
+MCC is actively working on the requirements for MCP Instance Provider. Please contact to the `secretariat <mailto:mcc@dmc.international>`_ to get further detail.
