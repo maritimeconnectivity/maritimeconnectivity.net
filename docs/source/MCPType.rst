@@ -13,7 +13,7 @@ This does not prohibit a later revisiting of these goals. Or prohibit including 
 
 Organization
 ^^^^^^^^^^^^
-In MCP an organization is an entity of an MCP Instance Provider, such as an institution, company or an association, that has a collective goal and is linked to an external environment. Examples, include international organizations such as IMO, IALA, IHO. National authorities such as US Coastguard, Swedish Maritime Administration. Local authorities such as VTS-Oeresund, Port of Rotterdam, Hong Kong SAR. Or commercial companies such as Transas or Maris.
+In MCP an organization is an entity of an MCP Instance Provider, such as an institution, a company, an international organization, a national or local authority, that has a collective goal and is linked to an external environment.
 
 In order to be able to use the functions of MCP in any way, an organization needs to be signed up to MCP. In the context of the EfficienSea 2.0 and STM projects, this is currently done be sending an email with various information about the organization to a MCP test bed administrator.
 
@@ -41,22 +41,34 @@ Examples of valid organization ids:
 
 MRN has been approved by `IANA <https://www.iana.org/>`__ as an official URN namespace. For more information on the MRN specification you can read more at https://www.iana.org/assignments/urn-formal/mrn
 
-Vessels
+Vessel
 ^^^^^^^
-Vessels describe any floating object used for the carriage of people or goods.
+Vessel describe any floating object used for the carriage of people or goods.
 
 The main need for registering vessels in MCP is so that digital authentication certificates can be issued for them. Thereby enabling secure communication between vessels as well as digitally signing of documents. Users might also use these authentication certificates for other purposes. The important thing is that the functionality is there.
 
 As part of the authentication certificate of a vessel its name, MMSI number, IMO number, callsign and possible other attributes are included in the header of the authentication certificate.
 
-Services
+Service
 ^^^^^^^^
-Services refer to digital services. For example, a weather service that is available to other services for machine to machine communication. Services need to be registered in such a way that it can successfully authenticate users.
+Service refer to digital services. For example, a weather service that is available to other services for machine to machine communication. Services need to be registered in such a way that it can successfully authenticate users.
 
-Users
+User
 ^^^^^
-Users mainly refer to human users. Human users differ from other actors in that they typically use a username/password to login which implies a different interaction pattern with the identity registry than say communication between vessels.
+User mainly refer to human users. Human users differ from other actors in that they typically use a username/password to login which implies a different interaction pattern with the identity registry than say communication between vessels.
 
-Devices
+Device
 ^^^^^^^
-Devices can be any number of entities that are not covered by the other entity types. It could for example be a lighthouse, an ECDIS or a server that needs to be able to authenticate itself.
+Device can be any number of entities that are not covered by the other entity types. It could for example be a lighthouse, an ECDIS or a server that needs to be able to authenticate itself.
+
+MIR
+^^^
+MIR indicates a running instance of Maritime Identity Registry (MIR), one of the MCP core components
+
+MSR
+^^^
+MSR indicates a running instance of Maritime Service Registry (MSR), one of the MCP core components
+
+MMS
+^^^
+MMS indicates a running instance of Maritime Messaging Service (MMS), one of the MCP core components
