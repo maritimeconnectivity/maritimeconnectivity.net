@@ -7,9 +7,12 @@ Identity management and security is a very complex and comprehensive field. So w
 * Managing information about entities that does not need to have access rights. For example, route or container information. While information about routes can be accessed by various users and systems. Routes by them self does not need access rights to access other information. It is only users and systems/devices that need access right.
 * Maintaining information about entities that are not security related. For example, business addresses of users and organizations. Or location information about entities that can be used, for example, for routing messages to the right location.
 
-The main reason for excluding all but non-essential security related information is that it opens up the never ending discussion about what exactly should be maintained in the identity registry. If we make a generalized information store that maintains and provides query capabilities for all kinds of information about users and systems/devices. For example, business addresses, geographical location. We might as well use this functionality for storing other queryable information. For example, maintaining information about routes or cargo.
+The main reason for excluding all but non-essential security related information is that it opens up the never ending discussion about what exactly should be maintained in the identity registry.
+If we make a generalized information store that maintains and provides query capabilities for all kinds of information about users and systems/devices.
+For example, business addresses, geographical location. We might as well use this functionality for storing other queryable information.
+For example, maintaining information about routes or cargo.
 
-This does not prohibit a later revisiting of these goals. Or prohibit including work from other groups into a general framework at a later time. But for time being the identity registry will revolve about the 5 entities listed below.
+The internal identity management system is built of a hierarchy with organizations on top, that can have different types of entities (except organization) them, where one entity can only belong to one organization.
 
 Organization
 ^^^^^^^^^^^^
@@ -72,3 +75,7 @@ MSR indicates a running instance of Maritime Service Registry (MSR), one of the 
 MMS
 ^^^
 MMS indicates a running instance of Maritime Messaging Service (MMS), one of the MCP core components
+
+Mandatory information to register entity per type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To be written....

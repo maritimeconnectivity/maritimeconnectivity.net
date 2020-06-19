@@ -7,17 +7,11 @@ This primarily aims to cover the technical parts of MCP. If you are not familiar
 
 Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritimeconnectivity>`__ for general usage questions and new releases.
 
-
-<API document - swagger OpenAPI standard>
-<Cert profile mandatory>
-<What MCC governs>
-
-
 .. toctree::
    :maxdepth: 2
 
+   navigation
    basicConcept
-   gettingStarted
    MCC
    history
    MCPType

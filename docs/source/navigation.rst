@@ -1,15 +1,16 @@
-Getting Started
-===============
+Navigation for readers
+======================
+This page aims to lead readers to get proper pages.
 
-I want to know MCP
+who wants to know about MCP
 --------------------------------
 * :ref:`MCP basic concept page<mcp-basic-concept>`.
 
-I want to try MCP at MCP testbed
+who wants to try MCP at MCP testbed
 -----------------------------------------------
 -> Querying MSR
 
-I want to run an MCP instance
+who wants to run an MCP instance
 -----------------------------------------------
  - on your machine
  - as MCP instance provider
@@ -17,11 +18,11 @@ I want to run an MCP instance
 Please refer the pages below:
 :ref:`MCP instance provider page<mcp-instance-provider>`.
 
-I want to use MCP service
+who wants to use MCP service
 -------------------------------
 
-I want to register your entities to MCP
+who wants to register your entities to MCP
 -----------------------------------------------------
 
-I want to be a service provider at MCP
+who wants to be a service provider at MCP
 -----------------------------------------------------

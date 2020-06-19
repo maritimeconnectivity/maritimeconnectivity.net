@@ -148,3 +148,7 @@ The query parameter is a string with the following layout::
 For example::
 
   serviceType:VIS AND organizationId:SMA
+
+What MCC governs in MSR
+^^^^^^^^^^^^^^^^^^^^^^^
+* REST API (https://sr.maritimecloud.net/swagger-ui/index.html)

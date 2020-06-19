@@ -16,8 +16,8 @@ Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritime
 .. toctree::
    :maxdepth: 2
 
+   navigation
    basicConcept
-   gettingStarted
    MCC
    history
    MCPType
