@@ -1,3 +1,5 @@
+.. _msr:
+
 Maritime Service Registry (MSR)
 ================================
 

@@ -1,3 +1,5 @@
-Running Your Own MSR
+.. _setup-msr:
+
+Setting up MSR
 ====================
 <to be updated>

@@ -21,7 +21,7 @@ Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritime
    OIDC
    MSR
    MMS
-   useTestbed
+   useMCPInstance
    setupMIR
    setupMSR
    setupMMS

@@ -1,4 +1,6 @@
-MCP Type
+.. _mcp-type:
+
+MCP entity type
 ===============
 In order to be able to describe some of the concepts we are working with, here is a short introduction of the various actors we envision will interact with the identity registry.
 

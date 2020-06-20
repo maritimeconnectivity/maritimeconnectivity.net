@@ -1,3 +1,5 @@
+.. _mms:
+
 Maritime Messaging Service (MMS)
 ================================
 

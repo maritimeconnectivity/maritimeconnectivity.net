@@ -1,3 +1,5 @@
+.. _mcp-history:
+
 History
 ==============
 

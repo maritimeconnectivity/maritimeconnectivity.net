@@ -37,14 +37,12 @@
 <p>This documentation describes Maritime Connectivity Platform from the overall architecture to the technical details of the MCP reference implementation.</p>
 <p>This primarily aims to cover the technical parts of MCP. If you are not familiar with MCP we encourage you to read <a class="reference external" href="https://maritimeconnectivity.net/">MCP official webpage</a> that gives the idea of MCP in more high level.</p>
 <p>Please refer <a class="reference external" href="https://groups.google.com/forum/#!forum/maritimeconnectivity">our Google Group</a> for general usage questions and new releases.</p>
-<p>&lt;API document - swagger OpenAPI standard&gt;
-&lt;Cert profile mandatory&gt;
-&lt;What MCC governs&gt;</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation for readers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html#who-wants-to-know-about-mcp">who wants to know about MCP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html#who-wants-to-try-mcp-at-mcp-testbed">who wants to try MCP at MCP testbed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#who-wants-to-know-mcp-in-high-level">who wants to know MCP in high level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#who-wants-to-know-mcp-in-low-technical-level">who wants to know MCP in low, technical level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#who-wants-to-try-mcp-at-mcc-mcp-testbed">who wants to try MCP at MCC MCP testbed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navigation.html#who-wants-to-run-an-mcp-instance">who wants to run an MCP instance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navigation.html#who-wants-to-use-mcp-service">who wants to use MCP service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navigation.html#who-wants-to-register-your-entities-to-mcp">who wants to register your entities to MCP</a></li>
@@ -61,7 +59,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MCPType.html">MCP Type</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="MCPType.html">MCP entity type</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="MCPType.html#organization">Organization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MCPType.html#vessel">Vessel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MCPType.html#service">Service</a></li>
@@ -70,6 +68,7 @@
 <li class="toctree-l2"><a class="reference internal" href="MCPType.html#mir">MIR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MCPType.html#msr">MSR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MCPType.html#mms">MMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MCPType.html#mandatory-information-to-register-entity-per-type">Mandatory information to register entity per type</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="MCPInstanceProvider.html">MCP Instance Provider</a><ul>
@@ -104,11 +103,16 @@
 <li class="toctree-l2"><a class="reference internal" href="MSR.html#basic-usage">Basic usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MSR.html#geographic-functionality">Geographic Functionality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MSR.html#query-filter-format">Query Filter Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MSR.html#what-mcc-governs-in-msr">What MCC governs in MSR</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="MMS.html">Maritime Messaging Service (MMS)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="useTestbed.html">Using MCP Testbed</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="useTestbed.html#issuing-a-certificate-from-mcp-testbed-root-certificate">Issuing a Certificate from MCP Testbed Root Certificate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MMS.html">Maritime Messaging Service (MMS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MMS.html#what-mcc-governs-in-mms">What MCC governs in MMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="useMCPInstance.html">Using MCP instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="useMCPInstance.html#using-mcc-mcp-testbed">Using MCC MCP testbed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="useMCPInstance.html#using-mcp-instance-provider">Using MCP Instance Provider</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="setupMIR.html">Setting up MIR</a><ul>
@@ -121,8 +125,8 @@
 <li class="toctree-l2"><a class="reference internal" href="setupMIR.html#setting-up-nginx">Setting up NGINX</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="setupMSR.html">Running Your Own MSR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setupMMS.html">Running Your Own MMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setupMSR.html">Setting up MSR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setupMMS.html">Setting up MMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terminology.html">Terminology</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="terminology.html#list-of-terms">List of terms</a></li>
 </ul>
@@ -162,17 +166,17 @@
 <li class="toctree-l1"><a class="reference internal" href="basicConcept.html">Basic Concept</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MCC.html">MCP Consortium (MCC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MCPType.html">MCP Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MCPType.html">MCP entity type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MCPInstanceProvider.html">MCP Instance Provider</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MIR.html">Maritime Identity Registry (MIR)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PKI.html">Public Key Infrastructure (PKI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OIDC.html">Open ID Connect (OIDC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MSR.html">Maritime Service Registry (MSR)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MMS.html">Maritime Messaging Service (MMS)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="useTestbed.html">Using MCP Testbed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useMCPInstance.html">Using MCP instance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupMIR.html">Setting up MIR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setupMSR.html">Running Your Own MSR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setupMMS.html">Running Your Own MMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setupMSR.html">Setting up MSR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setupMMS.html">Setting up MMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terminology.html">Terminology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
 </ul>

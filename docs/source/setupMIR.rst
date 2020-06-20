@@ -1,3 +1,5 @@
+.. _setup-mir:
+
 Setting up MIR
 ==============
 If your organizations wishes to connect to MCP as an Identity Provider, to enable your uses to authenticate in MCP, please contact Oliver Haagh at oliver@dmc.international in order to set it up. Note that currently you need to expose interfaces that supports either OpenID Connect or SAML2.

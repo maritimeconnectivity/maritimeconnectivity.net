@@ -1,3 +1,5 @@
+.. _mir:
+
 Maritime Identity Registry (MIR)
 ================================
 Maritime Identity Registry (MIR for short) is an identity provider and an authority for identities of persons, organizations or ships that are using the MCP.

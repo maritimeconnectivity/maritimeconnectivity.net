@@ -1,3 +1,5 @@
+.. _mcc:
+
 MCP Consortium (MCC)
 ====================
 MCP consortium (MCC) governs the standards relating to MCP, including the MCP source code. The MCC operates a testbed for MCP (done by a member on behalf of the consortium), but does not operate an operational instance of the MCP. Rather, the MCC authorises other organisations to run operational instances of the MCP.

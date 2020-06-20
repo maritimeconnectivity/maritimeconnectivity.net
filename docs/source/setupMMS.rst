@@ -1,3 +1,5 @@
-Running Your Own MMS
+.. _setup-mms:
+
+Setting up MMS
 ====================
-will be described soon.
+<to be updated>
