@@ -19,6 +19,8 @@ Or any combination hereof.
 An instance provider will always be running several environments - at least a staging and production environment, which is required by the system configuration requirements (see later). Most instance providers will typically have the need to run even more environments than that.
 Any MCP instance running environments consisting of only an MMS and/or MSR environments without a MIR component will need to rely on another MCP instance with a running MIR for authentication purpose.
 
+.. _mcp-instance-provider-how-to:
+
 How to be an MCP Instance Provider
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 MCC is actively working on the requirements for MCP Instance Provider. Please contact to the `secretariat <mailto:mcc@dmc.international>`_ to get further detail.

@@ -2,6 +2,8 @@ Navigation for readers
 ======================
 This page aims to lead readers to get proper information by purpose.
 
+.. _mcp-highlevel-ref:
+
 Knowing MCP in high level
 -----------------------------------
 * :ref:`MCP basic concept <mcp-basic-concept>`
@@ -52,3 +54,9 @@ Becoming a service provider at MCP
 -----------------------------------------------------
 * :ref:`references in technical level of MCP <mcp-technical-ref>`
 * :ref:`Using MCP instance <mcp-instance-usage>`
+
+Becoming an MCP Instance Provider
+-----------------------------------------------------
+* :ref:`references in high level of MCP <mcp-highlevel-ref>`
+* :ref:`references in technical level of MCP <mcp-technical-ref>`
+* :ref:`How to be an MCP Instance Provider <mcp-instance-provider-how-to>`
