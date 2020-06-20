@@ -28,6 +28,8 @@ The consortium has an advisory board with representatives from the following int
 * `CIRM <http://www.cirm.org/>`_
 * `IHO <https://www.iho.int/>`_
 
+.. _mcc-how-to:
+
 How to join MCC
 ^^^^^^^^^^^^^^^^
 All other relevant organisations (non-profit and for-profit) are invited to join the consortium.

@@ -23,40 +23,50 @@ Knowing MCP in low, technical level
 
 Trying MCP at MCC MCP testbed
 -----------------------------------------------
-* :ref:`references in technical level of MCP <mcp-technical-ref>`
+* :ref:`All articles from 'Knowing MCP in low, technical level' <mcp-technical-ref>`
 * :ref:`Using MCC MCP testbed <mcp-instance-usage-testbed>`
 
 Running an MCP instance
 -----------------------------------------------
-* :ref:`references in technical level of MCP <mcp-technical-ref>`
+* :ref:`All articles from 'Knowing MCP in low, technical level' <mcp-technical-ref>`
 * :ref:`Setting up MIR <setup-mir>`
 * :ref:`Setting up MSR <setup-msr>`
 * :ref:`Setting up MMS <setup-mms>`
 
 Using MCP service
 -------------------------------
-* :ref:`references in technical level of MCP <mcp-technical-ref>`
+* :ref:`All articles from 'Knowing MCP in low, technical level' <mcp-technical-ref>`
 * :ref:`Using MCP instance <mcp-instance-usage>`
 
 .. _mcp-registration:
 
 Registering your entities to MCP
 -----------------------------------------------------
-* :ref:`references in technical level of MCP <mcp-technical-ref>`
+* :ref:`All articles from 'Knowing MCP in low, technical level' <mcp-technical-ref>`
 * :ref:`Using MCP instance <mcp-instance-usage>`
 
 Getting MCP certificates for your entities
 -----------------------------------------------------
-* :ref:`references in MCP registration <mcp-registration>`
+* :ref:`All articles from 'Registering your entities to MCP' <mcp-registration>`
 * :ref:`Using MCP instance <mcp-instance-usage>`
+
+Becoming a member of MCC
+-----------------------------------------------------
+* :ref:`All articles from 'Knowing MCP in high level' <mcp-highlevel-ref>`
+* :ref:`How to join MCC <mcc-how-to>`
 
 Becoming a service provider at MCP
 -----------------------------------------------------
-* :ref:`references in technical level of MCP <mcp-technical-ref>`
+* :ref:`All articles from 'Knowing MCP in low, technical level' <mcp-technical-ref>`
 * :ref:`Using MCP instance <mcp-instance-usage>`
 
 Becoming an MCP Instance Provider
 -----------------------------------------------------
-* :ref:`references in high level of MCP <mcp-highlevel-ref>`
-* :ref:`references in technical level of MCP <mcp-technical-ref>`
+* :ref:`All articles from 'Knowing MCP in high level' <mcp-highlevel-ref>`
+* :ref:`All articles from 'Knowing MCP in low, technical level' <mcp-technical-ref>`
 * :ref:`How to be an MCP Instance Provider <mcp-instance-provider-how-to>`
+
+Becoming a contributor to MCP source code
+-----------------------------------------------------
+* :ref:`All articles from 'Knowing MCP in low, technical level' <mcp-technical-ref>`
+* :ref:`Using MCP instance <mcp-instance-usage>`
