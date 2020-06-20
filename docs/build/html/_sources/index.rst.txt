@@ -25,6 +25,7 @@ Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritime
    setupMIR
    setupMSR
    setupMMS
+   sourcecode
    terminology
    reference
 

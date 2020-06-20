@@ -8,35 +8,39 @@ List of terms
 
 Maritime Connectivity Platform (MCP)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A communication framework enabling efficient, secure, reliable and seamless electronic information exchange among all authorized maritime stakeholders across available communication systems”, based on the IMO e-navigation strategy (from D3.7 Technical Specification)
+A communication framework enabling efficient, secure, reliable and seamless electronic information exchange among all authorized maritime stakeholders across available communication systems”, based on the IMO e-navigation strategy.
 
 Maritime Connectivity Platform Consortium (MCC)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-An international association that governs standards, reference implementations, and testbed environments related to MCP, and will maintain the root CA list of MCP instance providers
+An international association that governs standards, reference implementations, and testbed environments related to MCP, and will maintain the root CA list of MCP instance providers.
 
 Maritime Identity Registry (MIR)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Technical MCP core component enabling an authentication of all maritime stakeholders in the context of the MCP and thus increasing the security and reliability of communication (from D3.7 Technical Specification)
+Technical MCP core component enabling an authentication of all maritime stakeholders in the context of the MCP and thus increasing the security and reliability of communication .
 
 Maritime Service Registry (MSR)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Technical MCP core component that serves as a central reference point to provide and find services and thus to improve the visibility and accessibility of available information and services in the maritime domain, like yellow pages of maritime service (from D3.7 Technical Specification)
+Technical MCP core component that serves as a central reference point to provide and find services and thus to improve the visibility and accessibility of available information and services in the maritime domain, like yellow pages of maritime service.
 
 Maritime Messaging Service (MMS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Technical MCP core component that provides shore-based messaging service for the provision of flexible communication between ship and shore by using multiple available communication links and for delivering geo-location based messages (from D3.7 Technical Specification)
+Technical MCP core component that provides shore-based messaging service for the provision of flexible communication between ship and shore by using multiple available communication links and for delivering geo-location based messages.
 
 MCP core component
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Either MIR, MSR, or MMS
+Either MIR, MSR, or MMS.
 
 MCP instance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A running instance of MCP core component
+A running instance of MCP core component.
+
+MCP environment (in the context of MCP instance)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+An environment can be categorized as one of its deployment purposes such as test, staging, and production (refer to `deployment environment <https://en.wikipedia.org/wiki/Deployment_environment>`__). An environment consists of one or more MCP instances.
 
 MCP instance provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-An organization which takes responsibility of operating one or more MCP instances.
+An organization which takes responsibility of operating two (staging and production) or more MCP environment.
 
 MCP portal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,27 +48,27 @@ A front-end service enabling MCP users utilize identity management and investiga
 
 Key actor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Maritime entities which needs to be authenticate for access right, is not both public and security related, and interact with the identity registry (from MCP Identity Platform document https://developers.maritimeconnectivity.net/identity/index.html)
+Maritime entities which needs to be authenticate for access right, is not both public and security related, and interact with the identity registry (from MCP Identity Platform document https://developers.maritimeconnectivity.net/identity/index.html).
 
 Organization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-An organization is an entity, such as an institution, company or an association that has a collective goal and is linked to an external environment. Examples, include international organizations such as IMO, IALA, and IHO. National authorities such as US Coastguard, Swedish Maritime Administration. Local authorities such as VTS-Oeresund, Port of Rotterdam, Hong Kong SAR. Or commercial companies such as Transas or Maris. (from D3.7 Technical Specification)
+An organization is an entity, such as an institution, company or an association that has a collective goal and is linked to an external environment. Examples, include international organizations such as IMO, IALA, and IHO. National authorities such as US Coastguard, Swedish Maritime Administration. Local authorities such as VTS-Oeresund, Port of Rotterdam, Hong Kong SAR. Or commercial companies such as Transas or Maris.
 
 User
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Users mainly refers to human users. Human users differ from other actors in that they typically use a username/password to login which implies a different interaction pattern with the identity registry then say communication between vessels. (from D3.7 Technical Specification)
+Users mainly refers to human users. Human users differ from other actors in that they typically use a username/password to login which implies a different interaction pattern with the identity registry then say communication between vessels.
 
 Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Devices can be any number of entities that is not covered by the other entity types. It could for example be a lighthouse, an ECDIS or a server that needs to be able to authenticate itself. For example an ECDIS system. (from D3.7 Technical Specification)
+Devices can be any number of entities that is not covered by the other entity types. It could for example be a lighthouse, an ECDIS or a server that needs to be able to authenticate itself. For example an ECDIS system.
 
 Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Services refers to digital services, as described above. For example, a weather service that is available to other services for machine to machine communication. Services needs to be registered in such a way that it can successfully authenticate users. (from D3.7 Technical Specification)
+Services refers to digital services, as described above. For example, a weather service that is available to other services for machine to machine communication. Services needs to be registered in such a way that it can successfully authenticate users.
 
 Vessel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Vessels describes any floating object used for the carriage of people or goods. The main need for registering vessels in the Maritime Connectivity Platform is so that digital authentication certificates can be issued for them. Thereby enabling secure communication between vessels as well as digitally signing of documents. Users might also use these authentication certificates for other purposes. The important thing is that the functionality is there. As part of the authentication certificate of a vessel its name, MMSI number, IMO number, call sign and possible other attributes is included in the header of the authentication certificate (from D3.7 Technical Specification)
+Vessels describes any floating object used for the carriage of people or goods. The main need for registering vessels in the Maritime Connectivity Platform is so that digital authentication certificates can be issued for them. Thereby enabling secure communication between vessels as well as digitally signing of documents. Users might also use these authentication certificates for other purposes. The important thing is that the functionality is there. As part of the authentication certificate of a vessel its name, MMSI number, IMO number, call sign and possible other attributes is included in the header of the authentication certificate
 
 Identity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

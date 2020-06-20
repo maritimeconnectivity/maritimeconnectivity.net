@@ -11,10 +11,21 @@ Enrolment of the MCC MCP testbed as an organization is free and open while that 
 
 Using MCC MCP testbed
 ---------------------
-In order to get an organization in our testbed, its users and any ships the organization might own on to the MCP testbed, the organization needs to perform a signup process.
-The process is currently manual. To start the process, please fill out the `registration form <https://management.maritimecloud.net/#/apply>`__.
+MCC (or rather partners of the MCC on behalf of the MCC) will operate 3 environments of the MCP.
 
-Once your organization has been approved you will have access to MCP and its services.
+* Test environment which will be used for testing new versions of the MCP reference software as developed by the MCC (or rather partners of the MCC on behalf of the MCC).
+* Staging environment which will be used for testing new release candidates of the MCP reference software.
+* Public test environment for use by anyone for general tests/assessment of the MCP and services. This is mainly for promotional purposes.
+
+Only MMC members will be granted access to the test and staging environments, and these will only be used for the purposes designated for them.
+The pubic test environment will be, as the name indicates, made available to all (relevant) external stakeholders. Users of the public test environment will go through a very simple validation process.
+
+1. New users apply for access through the management portal of the public test environment by filling out the `registration form <https://management.maritimecloud.net/#/apply>`__.
+2. Their organisations will be assessed though their website
+3. The users will be validated through email correspondence where they are requested to use an email address belonging to the official internet domain
+4. Access to the environments are handled by the MCC secretariat, which may deviate from the above procedure if they deem appropriate
+
+Once your organization has been approved you will have access to services in the public test environment.
 You should probably start by looking at the `Management Portal <https://management.maritimecloud.net/>`__.
 
 Issuing a Certificate from MCP Testbed Root Certificate
