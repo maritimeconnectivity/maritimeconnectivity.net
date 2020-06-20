@@ -25,8 +25,12 @@ Currently the implementation effort in MCP is concentrating on passwords for hum
 
 While the difference of using authentication certificates or passwords might seem minor from a user perspective the underlying implementation and usage is radically different which is why it has been split into different sections.
 
+Authentication in MIR
+^^^^^^^^^^^^^^^^^^^^^
+MIR authenticates an user or a vessel based on two authentication methods, Public Key Infrastructure (PKI) and Open ID Connect (OIDC). Please refer the detail in :ref:`MIR description <mir>`.
+
 Certificate (PKI) Authentication Flow
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To illustrate the authentication flow using a certificate the sequence diagram below is provided.
 
 .. image:: _static/image/cert_authentication_flow.png
@@ -36,7 +40,7 @@ To illustrate the authentication flow using a certificate the sequence diagram b
 Alternatively it is possible to get a token from certificate. See more detail in :ref:`Obtaining an OIDC Token using a Certificate section<cert-to-token>`.
 
 OIDC Authentication Flow
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To illustrate the authentication flows the sequence diagrams below is provided.
 
 The first diagram below shows the standard `OpenID Connect Authorization Code Flow <http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth>`__ involving a browser being used by the user to access a service in the form of a webpage.
