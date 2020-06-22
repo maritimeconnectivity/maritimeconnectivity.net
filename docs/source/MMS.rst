@@ -42,5 +42,11 @@ The current version of MMS is implemented to support pure polling and long polli
 In order to deliver the MRN-based message to the MMS user, it is necessary to define the Source MRN and the Destination MRN in the header of the HTTP message via the MMS. In the IP network, the destination is the destination IP address. The destination IP address of the client using MMS is MMS, and the specified destination MRN is the end point to which the actual message is transmitted. For example, even if the ship's IP address changes, the ID is a fixed value, so messages destined for the ship's ID may be directed to the changed IP address. Therefore, in order to support the push mode, the MRN should be transmitted as a unique identifier to the user designated by the MRN by inquiring and utilizing the latest network locator mapped to the corresponding identifier.
 
 What MCC governs in MMS
------------------------
-To be described...
+------------------------
+* MMS reference implementation
+
+MMS reference implementation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MCC governs the reference implementation on MMS as follows:
+
+- MMS: <To be added>

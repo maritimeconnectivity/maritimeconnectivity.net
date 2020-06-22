@@ -33,9 +33,9 @@ Since the authentication process is the responsibility of the organizations, it 
 
 What MCC governs in MIR
 ^^^^^^^^^^^^^^^^^^^^^^^
-* MCP types and its hierarchy
-* PKI certificate profile
-* OIDC Token
+* :ref:`MCP types and its hierarchy <mcp-type>`
+* :ref:`PKI certificate profile <mcp-pki-cert-profile>`
+* :ref:`OIDC Token <mcp-token>`
 * REST API (https://test-api.maritimecloud.net/v2/api-docs)
 * MCP Instance Provider root CA list
 * MIR reference implementation

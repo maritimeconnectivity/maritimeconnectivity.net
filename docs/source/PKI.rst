@@ -20,6 +20,8 @@ To issue a new certificate for, for example, a vessel an administrator for the o
 
 After having issued a certificate the administrator can now install it on the ship in some way. The actual logistics about how and where to install it is outside of the scope of the identity registry as this might vary a lot between organizations and projects. This also reduces the functionality of the identity registry to just provide the core functionality of Identity management allowing users to be able to build innovative solutions on top of it. This also applies directly to machine to machine communication. The identity registry places no restrictions about what kind of machine to machine communication protocols that should be used, it just provides the basic infrastructure to allow for each machine to authenticate the host in the other end. Letting each project select their protocols if needed.
 
+.. _mcp-pki-cert-profile:
+
 MCP Certificate
 ---------------
 MCP can issue X.509 certificates for the users which can then be used for authentication. Service providers relying on X.509 certificate authentication must obtain and install MCP root certificate into their webservice.

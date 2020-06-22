@@ -1,11 +1,12 @@
 Navigation for readers
 ======================
-This page aims to lead readers to get proper information by purpose.
+This page aims to lead the readers to get proper information.
 
 .. _mcp-highlevel-ref:
 
 Knowing MCP in high level
 -----------------------------------
+* `MCP official webpage <https://maritimeconnectivity.net/>`__
 * :ref:`MCP basic concept <mcp-basic-concept>`
 * :ref:`MCC <mcc>`
 * :ref:`History <mcp-history>`

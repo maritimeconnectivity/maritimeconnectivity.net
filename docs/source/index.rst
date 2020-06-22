@@ -15,12 +15,13 @@ Please refer `our Google Group <https://groups.google.com/forum/#!forum/maritime
    MCC
    history
    MCPType
-   MCPInstanceProvider
+   MRN
    MIR
    PKI
    OIDC
    MSR
    MMS
+   MCPInstanceProvider
    useMCPInstance
    setupMIR
    setupMSR

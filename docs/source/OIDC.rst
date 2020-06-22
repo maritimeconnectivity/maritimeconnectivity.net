@@ -16,7 +16,7 @@ Keycloak
 
 Keycloak is an open source product developed by RedHat. Keycloak can be set up to work in different ways. It can be set up as an Identity Broker in which case it will link to other Identity Providers, which is what MCP Identity Broker does, or it can be set up to work as an Identity Provider, using either a database or LDAP/AD as a backend. Due the ability to connect to LDAP/AD, Keycloak can be used as quick and easy way to set up a Identity Provider.
 
-.. _cert-to-token:
+.. _mcp-token:
 
 MCP token
 ^^^^^^^^^
@@ -121,6 +121,7 @@ If your Identity Provider has the values in different attributes, some mapping c
 
 The Identity Broker will generate and attach the organizations MRN and the users MRN to the user.
 
+.. _cert-to-token:
 
 Obtaining an OIDC Token using a Certificate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

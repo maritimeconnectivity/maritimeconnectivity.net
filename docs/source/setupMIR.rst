@@ -17,7 +17,8 @@ Complementary documentation of setup can be found at:
 - https://github.com/MaritimeConnectivityPlatform/MCPKeycloakSpi
 
 For easier management of the IR API it is advised to also setup the MCP management portal. The code for this can be found at https://github.com/MaritimeConnectivityPlatform/MCP-Portal.
-A running instance of MCC testbed can be found at https://management.maritimecloud.net/.
+
+We strongly recommend you to read the `MIR setup guide <https://github.com/MaritimeConnectivityPlatform/IdentityRegistry/blob/master/setup/guide/MIR_setup.pdf>`__ to get more details.
 
 Prerequisites
 --------------

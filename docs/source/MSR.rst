@@ -154,3 +154,10 @@ For example::
 What MCC governs in MSR
 ^^^^^^^^^^^^^^^^^^^^^^^
 * REST API (https://sr.maritimecloud.net/swagger-ui/index.html)
+* MSR reference implementation
+
+MSR reference implementation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MCC governs the reference implementation on MSR as follows:
+
+- MSR: https://github.com/MaritimeConnectivityPlatform/mc-serviceregistry

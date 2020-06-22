@@ -5,7 +5,7 @@ Using MCP instance
 There is two contexts of the usage of MCP instances, MCC MCP testbed and MCP Instance Provider's instance.
 Primary purpose of MCC MCP testbed is assessing new release of reference implementation and its impact to existing services.
 
-It is strongly recommended to use MCP Instance Provider's instance if the reader considers to consume or provide MCP services in operational purpose. (refer to the :ref:`List of MCP Instance Providers <mcp-instance-provider-list>`)
+It is strongly recommended to use MCP Instance Provider's instance if the reader considers to consume or provide MCP services in operational purpose. (Please refer to the :ref:`List of MCP Instance Providers <mcp-instance-provider-list>`)
 Enrollment of the MCC MCP testbed as an organization is free and open while that of MCP Instance Provider's instance depends on the enrollment policy set by each MCP Instance Provider.
 
 .. _mcp-instance-usage-testbed:
@@ -39,6 +39,8 @@ Any relevant organization is invited to join the testbed by applying through the
   * `staging environment <https://staging-management.maritimecloud.net/#/apply>`__.
   * `public test environment <https://management.maritimecloud.net/#/apply>`__.
 
+Please refer the manual of the management portal here: https://manual.maritimeconnectivity.net/
+
 Issuing a Certificate from MCP testbed Root Certificate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 In order to use the certificates issued by the MCP Identity Registry it is needed to add MCP Root Certificates to the relevant trustchain. Here you can download the root certificates for MCP instances:
@@ -51,10 +53,12 @@ Adding your external Identity Provider to MCP testbed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If your organizations wishes to connect to MCP testbed as an Identity Provider, to enable your uses to authenticate in MCP testbed, please contact Oliver Haagh at oliver@dmc.international in order to set it up. Note that currently you need to expose interfaces that supports either OpenID Connect or SAML2.
 
-Using MCP Instance Provider
----------------------------
-To be written.....
-
+MCP testbed use cases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * use of identity management or certificate case
 * use of service consumer case
 * use of service provider case
+
+Using MCP Instance Provider
+---------------------------
+Please refer the policy of the MCP Instance Provider you want to apply. (Please refer to the :ref:`List of MCP Instance Providers <mcp-instance-provider-list>`)

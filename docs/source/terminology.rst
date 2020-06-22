@@ -40,7 +40,7 @@ An environment can be categorized as one of its deployment purposes such as test
 
 MCP instance provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-An organization which takes responsibility of operating two (staging and production) or more MCP environment.
+An organization which takes responsibility of operating two (staging and production) or more MCP environments.
 
 MCP service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +52,7 @@ A front-end service enabling MCP users utilize identity management and investiga
 
 Key actor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Maritime entities which needs to be authenticate for access right, is not both public and security related, and interact with the identity registry (from MCP Identity Platform document https://developers.maritimeconnectivity.net/identity/index.html).
+Maritime entities which needs to be authenticate for access right, is not both public and security related, and interact with the identity registry.
 
 Organization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,9 +78,17 @@ Identity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The set of attributes that uniquely identifies a security principal. A security principal can have many different accounts that it uses to access various applications in the network. These accounts can be identified by these applications using different attributes of this entity. For example, a user can be known in the e-mail service by an e-mail ID, whereas that same user can be known in the human resource application by an employee number. The global set of such attributes constitutes the identity of the entity.
 
+MCP entity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+An entity registered at some MIR instance.
+
 Maritime Resource Name (MRN)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A naming scheme that can uniquely identify any maritime resource on a global scale. By maritime resource, it means anything that has an identity of some kind. This could be organizations, employees, a person, a physical or a virtual object, for instance an electronic document, a buoy, a ship, a mariner, a nautical chart or an electronic service (e.g., “today’s weather report for the Oresund Strait”). Not all resources are “retrievable” in an electronic sense; For example, human beings, corporations, and buoys. However, they can still be considered a resource. (from IALA webpage https://www.iala-aism.org/technical/data-modelling/mrn/)
+
+MCP namespace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The subspace of the MRN namespace that is governed by the MCC.
 
 Identity provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,11 +100,11 @@ An Identity Broker is a special type of the identity provider and an intermediar
 
 Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The process of verifying the identity claimed by an entity based on its credentials. (from white paper of Identity Management and Cyber Security)
+The process of verifying the identity claimed by an entity based on its credentials.
 
 Authorization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The process of establishing a specific entitlement that is consistent with authorization policies. (from white paper of Identity Management and Cyber Security)
+The process of establishing a specific entitlement that is consistent with authorization policies.
 
 Authorization policies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
