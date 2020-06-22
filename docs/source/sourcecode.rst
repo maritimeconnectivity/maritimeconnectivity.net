@@ -1,7 +1,9 @@
 Source code
 ===============
 
-All the source code for MCP is located at https://github.com/MaritimeConnectivityPlatform.
+All the source code for MCP is located at:
+
+https://github.com/MaritimeConnectivityPlatform
 
 .. _contributor-how-to:
 

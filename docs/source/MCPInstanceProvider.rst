@@ -19,6 +19,17 @@ Or any combination hereof.
 An instance provider will always be running several environments - at least a staging and production environment, which is required by the system configuration requirements (see later). Most instance providers will typically have the need to run even more environments than that.
 Any MCP instance running environments consisting of only an MMS and/or MSR environments without a MIR component will need to rely on another MCP instance with a running MIR for authentication purpose.
 
+.. _mcp-instance-provider-list:
+
+List of MCP Instance Providers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+There are currently no fully compliant instances of MCP - since the final specifications for MCP are still in the process of being developed. However, two organisations are currently setting up instances that will be MCP compliant:
+
+* `The Navelink Industry Consortium <https://management.maritimecloud.net/#/apply>`__
+* The Ministry of Ocean and Fisheries (Korea), through the `SMART Navigation project <https://www.smartnav.org/eng/html/Index_New/>`__
+
+In addition to this, the MCC operates (through two of its members, KRISO and Frequentis) an MCP test-instance. See more details in MCC MCP testbed section.
+
 .. _mcp-instance-provider-how-to:
 
 How to be an MCP Instance Provider

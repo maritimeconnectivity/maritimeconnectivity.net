@@ -42,6 +42,10 @@ MCP instance provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 An organization which takes responsibility of operating two (staging and production) or more MCP environment.
 
+MCP service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A digital service which is registered in an MSR and has submitted three documents of IALA's G1128 e-Navigation technical service specification guideline to the MSR.
+
 MCP portal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A front-end service enabling MCP users utilize identity management and investigating MCP services, based on MIR and MSR respectively. We provide a `manual <http://manual.maritimeconnectivity.net/>`__ for how to use it.
