@@ -5,7 +5,7 @@ Using MCP instance
 There is two contexts of the usage of MCP instances, MCC MCP testbed and MCP Instance Provider's instance.
 Primary purpose of MCC MCP testbed is assessing new release of reference implementation and its impact to existing services.
 It is strongly recommended to use MCP Instance Provider's instance if the reader considers to consume or provide MCP services in operational purpose.
-Enrolment of the MCC MCP testbed as an organization is free and open while that of MCP Instance Provider's instance depends on the enrolment policy set by each MCP Instance Provider.
+Enrollment of the MCC MCP testbed as an organization is free and open while that of MCP Instance Provider's instance depends on the enrollment policy set by each MCP Instance Provider.
 
 .. _mcp-instance-usage-testbed:
 

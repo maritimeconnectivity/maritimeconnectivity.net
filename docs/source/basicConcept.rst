@@ -3,11 +3,17 @@
 Basic Concept
 ===============
 
+.. image:: _static/image/mcp_concept.png
+    :align: center
+    :alt: MCP Concept figure
+
 Maritime Connectivity Platform (MCP) is a service-oriented architecture that is composed of three core components, namely MIR, MSR, and MMS.
 
   * Maritime Identity Registry (MIR): MIR has the objective to enable an authentication of all maritime stakeholders in the context of the Maritime Connectivity Platform and thus increasing the security and reliability of communication. This goal is archived by providing a trustworthy infrastructure for identity authentication of maritime entities like human actors, services and devices.
   * Maritime Service Registry (MSR): MSR is supposed to serve as a central reference point to provide and find services and thus to improve the visibility and accessibility of available information and services in the maritime domain. It’s best compared with a yellow pages phone book.
   * Maritime Messaging Service (MMS): MMS offers secure and efficient communication for the maritime domain. MMS is a message broker platform that delivers message to destination through both IP and non-IP communication channel by utilizing Maritime Resource Name (MRN) as endpoint address.
+
+.. _mcp-authentication:
 
 Authentication
 --------------
@@ -61,9 +67,8 @@ Another central aspect of Identity Management is the concept of authorization wh
 
 Authorization can typically be handled in two ways.
 
-Locally by the application or service that is being accessed.
-
-Centralizing the authorization policy decisions regardless of the location of the user or the application/service
+* Locally by the application or service that is being accessed.
+* Centralizing the authorization policy decisions regardless of the location of the user or the application/service
 
 Since authorization can always be done locally by the application that is being accessed, for example by storing user rights in a local database, we have decided that MCP will not prioritize central support for authorization for the next milestones. Instead focusing on getting authentication right.
 
@@ -73,7 +78,7 @@ Even though there are no real standards there are a number of approaches that ar
 
 Given these issues and many other we have to decide not to implement central authorization in MCP. Instead MCP will provide the information that can be used for authorization in the services.
 
-As described in the sections about [OpenID Connect] and [Certificate Attributes], both authentication methods provides information about the authenticated user that can be used for authorization:
+As described in the sections about :ref:`Authentication <mcp-authentication>`, both authentication methods provides information about the authenticated user that can be used for authorization:
 
 * The organization the entity belong to.
 
@@ -87,6 +92,30 @@ Authorization in MIR
 As an example of how authorization can be done, let us have a look at how it is handled inside the MCP Identity Registry. When it comes to authorization, the Identity Registry will have the same information about its users as any other service in MCP.
 
 The Identity Registry currently has these roles:
+
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| Role               | Approve New Org | Edit Own Org | Maintain Org Users | Maintain Org Vessels | Maintain Org Services | Maintain Org Devices | Maintain Org MMSes | Maintain Org Roles | Delete Org |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_SITE_ADMIN    |        X        |       X      |          X         |           X          |           X           |           X          |          X         |          X         |      X     |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_ORG_ADMIN     |                 |       X      |          X         |           X          |           X           |           X          |          X         |          X         |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_ENTITY_ADMIN  |                 |              |          X         |           X          |           X           |           X          |          X         |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_USER_ADMIN    |                 |              |          X         |                      |                       |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_VESSEL_ADMIN  |                 |              |                    |           X          |                       |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_SERVICE_ADMIN |                 |              |                    |                      |           X           |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_DEVICE_ADMIN  |                 |              |                    |                      |                       |           X          |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_MMS_ADMIN     |                 |              |                    |                      |                       |                      |          X         |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_APPROVE_ORG   |        X        |              |                    |                      |                       |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_USER          |                 |              |                    |                      |                       |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
 
 A few things should be noted:
 
@@ -102,4 +131,4 @@ A few things should be noted:
 
 * A ROLE_APPROVE_ORG can create a user for an organization if and only if there is no users for the organization (this is used for creating the first administrative user for an organization).
 
-In this example we will focus on ROLE_USER and ROLE_ORG_ADMIN. Let us assume that an Organization (DMA) wants to grant members of the internal "E-navigation" department administrative rights in the MCP Identity Registry. In DMAs Identity Provider setup the department name is automatically added to the "permissions" attribute. So to make this mapping the current DMA administrator sets up a role mapping between the permission "E-navigation" and the role ROLE_ORG_ADMIN. Once this is done, all members of the DMA E-navigation department will have administrative rights for the DMA organization inside the Identity Registry. As noted earlier, these rights only apply inside the Identity Registry. Other services must create a similar setup with mapping of roles and permissions.
+In this example we will focus on **ROLE_USER** and **ROLE_ORG_ADMIN**. Let us assume that an Organization (DMA) wants to grant members of the internal "E-navigation" department administrative rights in the MCP Identity Registry. In DMAs Identity Provider setup the department name is automatically added to the "permissions" attribute. So to make this mapping the current DMA administrator sets up a role mapping between the permission "E-navigation" and the role ROLE_ORG_ADMIN. Once this is done, all members of the DMA E-navigation department will have administrative rights for the DMA organization inside the Identity Registry. As noted earlier, these rights only apply inside the Identity Registry. Other services must create a similar setup with mapping of roles and permissions.

@@ -65,8 +65,16 @@ An example of the fields for a vessel could look like this::
 Finally, In additions to the information stored in the standard X.509 attributes listed above, the X509v3 extension SubjectAlternativeName (SAN) extension is used to store extra information. There already exists some predefined fields for the SAN extension, but they do not match the need we have for maritime related fields. Therefore the “otherName” field is used, which allows for using a Object Identifier (OID) to define custom fields. The OIDs currently used are not registered at ITU, but are randomly generated using a tool provided by ITU (see http://www.itu.int/en/ITU-T/asn1/Pages/UUID/uuids.aspx). See the table below for the fields defined, the OIDs of the fields and which kind of entities that uses the fields.
 
 +-----------------+------------------------------------------------+---------------------------------------+
-| Field           | Object Identifier (OID)                        | Related entity types                  |
+| Name            | Object Identifier (OID)                        | Used by                               |
 +=================+================================================+=======================================+
+| Flagstate       |`2.25.323100633285601570573910217875371967771`  | Vessel, Service                       |
++-----------------+------------------------------------------------+---------------------------------------+
+| Callsign        |`2.25.208070283325144527098121348946972755227`  | Vessel, Service                       |
++-----------------+------------------------------------------------+---------------------------------------+
+| IMO number      |`2.25.291283622413876360871493815653100799259`  | Vessel, Service                       |
++-----------------+------------------------------------------------+---------------------------------------+
+| MMSI number     |`2.25.328433707816814908768060331477217690907`  | Vessel, Service                       |
++-----------------+------------------------------------------------+---------------------------------------+
 | AIS shiptype    |`2.25.107857171638679641902842130101018412315`  | Vessel, Service                       |
 +-----------------+------------------------------------------------+---------------------------------------+
 | Port of register|`2.25.285632790821948647314354670918887798603`  | Vessel, Service                       |

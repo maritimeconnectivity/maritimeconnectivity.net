@@ -12,7 +12,7 @@ OpenID Connect provides authentication details in JWT tokens, that can be encryp
 
 Keycloak
 ^^^^^^^^^^
-Keycloak is one of many products that includes support for OpenID Connect, and it is the product that currently provides MCP Identity Broker which is the cornerstone in MCP user federation.
+`Keycloak <https://www.keycloak.org/>`__ is one of many products that includes support for OpenID Connect, and it is the product that currently provides MCP Identity Broker which is the cornerstone in MCP user federation.
 
 Keycloak is an open source product developed by RedHat. Keycloak can be set up to work in different ways. It can be set up as an Identity Broker in which case it will link to other Identity Providers, which is what MCP Identity Broker does, or it can be set up to work as an Identity Provider, using either a database or LDAP/AD as a backend. Due the ability to connect to LDAP/AD, Keycloak can be used as quick and easy way to set up a Identity Provider.
 
@@ -44,6 +44,84 @@ MCP expects the following attributes in the OpenID Connect JWT Access Token:
 
 These attributes will be directly mapped from attributes provided by the organizations Identity Provider, so the Identity Provider must also provide these attributes, except for the "org"-attribute.
 
+Getting connected to MCP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If your organizations wishes to connect to MCP as an Identity Provider, to enable your uses to authenticate in MCP,
+please contact `Oliver Haagh <mailto:oliver@dmc.international>`__ in order to set it up. Note that currently you need to expose interfaces that supports either OpenID Connect or SAML2.
+
+Within the scope of the MCC MCP testbed, organizations can get users registered in special project Identity Providers, supplied by MCP. To join MCP please fill out the form at `Apply <https://management.maritimecloud.net/#/apply>`__ .
+
+Setting up an OIDC Identity Provider
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OpenID Connect is supported by the latest ADFS and `Keycloak <https://www.keycloak.org/>`__ releases. MCP Identity Broker only supports the `OpenID Connect Authorization Code Flow <https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth>`__ when connecting to Identity Providers. This limitation only applies when the Identity Broker connects to Identity Providers, not when Services/Clients connects to the Identity Broker.
+
+As default MCP Identity Broker expect the following attributes to be provided by an OpenID Connect Identity Provider:
+
++--------------------+-----------------------------------------------------------------------------------------+
+| Attribute          | Description                                                                             |
++====================+=========================================================================================+
+| preferred_username | The username of the user in the parent organization.                                    |
++--------------------+-----------------------------------------------------------------------------------------+
+| email              | The email of the user.                                                                  |
++--------------------+-----------------------------------------------------------------------------------------+
+| given_name         | Firstname of the user.                                                                  |
++--------------------+-----------------------------------------------------------------------------------------+
+| family_name        | Lastname of the user.                                                                   |
++--------------------+-----------------------------------------------------------------------------------------+
+| name               | Full name of the user.                                                                  |
++--------------------+-----------------------------------------------------------------------------------------+
+| permissions        | List of permissions for this user assigned by the organization the user is a member of. |
++--------------------+-----------------------------------------------------------------------------------------+
+
+If your Identity Provider has the values in different attributes, some mapping can be set up.
+
+The Identity Broker will generate and attach the organizations MRN and the users MRN to the user.
+
+Setting up an OpenID Connect Identity Provider for multiple organizations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCP has some special Identity Providers that handles the authentication for multiple organizations. Current examples are "IALA" and "BIMCO ExtraNet". These Identity Providers are responsible for vetting the organizations they provide authentication for, so that it is confirmed that the organization is who they claim to be. New organizations can be added by these Identity Providers. Since MCP currently needs to know about organizations centrally to be able to (among other things) issue certificates, some extra information is needed from these Identity Providers, to be able to create them in the central Identity Registry, if they are not already known.
+
+The extra information must be given as attributes, in addition to the attributes mentioned in 'Setting up an OpenID Connect Identity Provider':
+
+As default MCP Identity Broker expect the following attributes to be provided by an OpenID Connect Identity Provider:
+
++-------------+---------------------------------------------------------------------------------------------------------------+
+| Attribute   | Description                                                                                                   |
++=============+===============================================================================================================+
+| mrn         | The Maritime Resource Name of the user.                                                                       |
++-------------+---------------------------------------------------------------------------------------------------------------+
+| org         | The Maritime Resource Name of the parent organization of the user.                                            |
++-------------+---------------------------------------------------------------------------------------------------------------+
+| org-name    | Human readable name of the parent organizations.                                                              |
++-------------+---------------------------------------------------------------------------------------------------------------+
+| org-address | Address of the organization. It must be without linebreaks, ending with comma and the country of the address. |
++-------------+---------------------------------------------------------------------------------------------------------------+
+
+Note that the MRN must be on the form "urn:mrn:mcl:user:dma@iala:thc" and "urn:mrn:mcl:org:dma@iala" for user and organization respectively. In this case the organization is "dma" whos identity is guaranteed by "iala".
+
+Setting up an SAML2 Identity Provider
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SAML2 is supported by older ADFS releases.
+
++--------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+| Attribute                                                          | Description                                                                             |
++====================================================================+=========================================================================================+
+| NAMEID                                                             | The username of the user in the parent organization.                                    |
++--------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress | The email of the user.                                                                  |
++--------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname    | Firstname of the user.                                                                  |
++--------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname      | Lastname of the user.                                                                   |
++--------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+| http://schemas.microsoft.com/ws/2008/06/identity/claims/role       | List of permissions for this user assigned by the organization the user is a member of. |
++--------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+
+If your Identity Provider has the values in different attributes, some mapping can be set up.
+
+The Identity Broker will generate and attach the organizations MRN and the users MRN to the user.
+
+
 Obtaining an OIDC Token using a Certificate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 It is possible to obtain OpenID Connect Tokens using certificate authentication. The idea is that instead of authenticating by being redirected to an Identity Provider as in the normal OpenID Connect flow, you authenticate at the Identity Broker by using your certificate (that has been issued by MCP Identity Registry). This authentication would work in the same way as when authenticating to any service. When authentication has been succesful the Identity Broker can then issue a JWT-token, which is what the OpenId Connect authentication use. So in effect what we have is a "bridge" between the 2 authentication approaches.
@@ -56,9 +134,9 @@ The flow looks like the diagram below:
     :align: center
     :alt: getting a token from certificate
 
-Example of Obtaining a OpenId Connect Token using a Certificate
+Example of Obtaining an OIDC Token using a Certificate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In this simple example we will assume that a certificate and key—​pair has been issued to the entity who wishes to authenticate. This example makes use of curl a commandline tool available on Linux and Mac OS X.
+In this simple example we will assume that a certificate and key—​pair has been issued to the entity who wishes to authenticate. This example makes use of curl a command line tool available on Linux and Mac OS X.
 
 The authentication involves 2 steps:
 
