@@ -6,14 +6,14 @@ There are two contexts of the usage of MCP instances, MCC MCP testbed and MCP In
 Primary purpose of MCC MCP testbed is assessing new release of reference implementation and its impact to existing test services.
 All entities including the services in the testbed will not be acknowledged as MCP entities.
 
-It is strongly recommended to use MCP Instance Provider's instance if the reader considers to consume or provide MCP services in operational purpose. (Please refer to the :ref:`List of MCP Instance Providers <mcp-instance-provider-list>`)
+It is strongly recommended to use the MCP Instance Provider's instance if the reader considers to consume or provide MCP services in operational purpose (Please refer to the :ref:`List of MCP Instance Providers <mcp-instance-provider-list>`).
 Enrollment of the MCC MCP testbed as an organization is free and open while that of MCP Instance Provider's instance depends on the policy set by each MCP Instance Provider.
 
 .. _mcp-instance-usage-testbed:
 
 Using MCC MCP testbed
 ---------------------
-MCC (or rather partners of the MCC on behalf of the MCC) through two of its members, KRISO and Frequentis, operates 3 environments of the MCP:
+MCC (or rather partners of the MCC on behalf of the MCC) through two of its members, KRISO and Frequentis, operates three environments of the MCP:
 
 * **test environment** which will be used for testing new versions of the MCP reference software as developed by the MCC (or rather partners of the MCC on behalf of the MCC).
 * **staging environment** which will be used for testing new release candidates of the MCP reference software.
