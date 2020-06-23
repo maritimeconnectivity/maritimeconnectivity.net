@@ -153,6 +153,7 @@ For example::
 
 What MCC governs in MSR
 ^^^^^^^^^^^^^^^^^^^^^^^
+* :ref:`MCP namespace <mcp-mrn>`
 * REST API (https://sr.maritimecloud.net/swagger-ui/index.html)
 * MSR reference implementation
 

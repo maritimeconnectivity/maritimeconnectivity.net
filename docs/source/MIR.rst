@@ -17,9 +17,90 @@ Identity Management
 ^^^^^^^^^^^^^^^^^^^
 Identity management refers to the process of employing technologies to manage information about the identity of users and control access to company resources. The goal of identity management is to improve productivity and security while lowering costs associated with managing users and their identities, attributes, and credentials.
 
-The goal of MIR is to create a solution that satisfies the most common identification needs for the entire maritime industry on a global scale.
+The goal of MIR is to create a solution that satisfies the most common identification needs for the entire maritime industry on a global scale, as it is shown in the :ref:`MCP namespace <mcp-mrn>`.
 
 This is not a simple task as any solution must support every possible user scenarios from small leisure sailors to multinational companies. The complexity of this task is why the functionality will be delivered over multiple milestones in the coming years. The most important things such as support for authentication will be implemented first. Additional functionality will be added based on user needs in the projects supported by MCP.
+
+.. _mir-authentication:
+
+Authentication in MIR
+^^^^^^^^^^^^^^^^^^^^^
+MIR authenticates an user or a vessel based on two authentication methods, Public Key Infrastructure (PKI) and Open ID Connect (OIDC). Please refer the detail in :ref:`MIR description <mir>`.
+
+Certificate (PKI) Authentication Flow
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To illustrate the authentication flow using a certificate the sequence diagram below is provided.
+
+.. image:: _static/image/cert_authentication_flow.png
+    :align: center
+    :alt: the sequence diagram of cert authentication flow
+
+Alternatively it is possible to get a token from certificate. See more detail in :ref:`Obtaining an OIDC Token using a Certificate section<cert-to-token>`.
+
+OIDC Authentication Flow
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To illustrate the authentication flows the sequence diagrams below is provided.
+
+The first diagram below shows the standard `OpenID Connect Authorization Code Flow <http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth>`__ involving a browser being used by the user to access a service in the form of a webpage.
+
+.. image:: _static/image/oidc_authentication_flow.png
+    :align: center
+    :alt: the sequence diagram of cert authentication flow
+
+The second diagram shows the flow used when an authenticated user is accessing a backend service. For browser based services this scenario is often used when the browser retrieves data from backend services. In this scenario since the user is authenticated, the user has a token that is presented for authentication for the backend service.
+
+.. image:: _static/image/backend_service_authentication_flow.png
+    :align: center
+    :alt: the sequence diagram of cert authentication flow
+
+.. _mir-authorization:
+
+Authorization in MIR
+^^^^^^^^^^^^^^^^^^^^
+
+As an example of how authorization can be done, let us have a look at how it is handled inside the MCP Identity Registry. When it comes to authorization, the Identity Registry will have the same information about its users as any other service in MCP.
+
+The Identity Registry currently has these roles:
+
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| Role               | Approve New Org | Edit Own Org | Maintain Org Users | Maintain Org Vessels | Maintain Org Services | Maintain Org Devices | Maintain Org MMSes | Maintain Org Roles | Delete Org |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_SITE_ADMIN    |        X        |       X      |          X         |           X          |           X           |           X          |          X         |          X         |      X     |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_ORG_ADMIN     |                 |       X      |          X         |           X          |           X           |           X          |          X         |          X         |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_ENTITY_ADMIN  |                 |              |          X         |           X          |           X           |           X          |          X         |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_USER_ADMIN    |                 |              |          X         |                      |                       |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_VESSEL_ADMIN  |                 |              |                    |           X          |                       |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_SERVICE_ADMIN |                 |              |                    |                      |           X           |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_DEVICE_ADMIN  |                 |              |                    |                      |                       |           X          |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_MMS_ADMIN     |                 |              |                    |                      |                       |                      |          X         |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_APPROVE_ORG   |        X        |              |                    |                      |                       |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+| ROLE_USER          |                 |              |                    |                      |                       |                      |                    |                    |            |
++--------------------+-----------------+--------------+--------------------+----------------------+-----------------------+----------------------+--------------------+--------------------+------------+
+
+A few things should be noted:
+
+* "Maintain" (as mentioned in the table above) means to be able to create, update and delete, as well as issuing and revoking certificates.
+
+* Excluding entities with the role ROLE_SITE_ADMIN, it is not possible for entities to see entities from other organizations.
+
+* A ROLE_SITE_ADMIN can maintain entities and organizations beyond his own organization.
+
+* Any entity, regardless of roles, can see all entities from its own organization, though some sensitive information from services is filtered for non-admins.
+
+* Only a ROLE_SITE_ADMIN can assign ROLE_SITE_ADMIN and ROLE_APPROVE_ORG roles.
+
+* A ROLE_APPROVE_ORG can create a user for an organization if and only if there is no users for the organization (this is used for creating the first administrative user for an organization).
+
+In this example we will focus on **ROLE_USER** and **ROLE_ORG_ADMIN**. Let us assume that an Organization (DMA) wants to grant members of the internal "E-navigation" department administrative rights in the MCP Identity Registry. In DMAs Identity Provider setup the department name is automatically added to the "permissions" attribute. So to make this mapping the current DMA administrator sets up a role mapping between the permission "E-navigation" and the role ROLE_ORG_ADMIN. Once this is done, all members of the DMA E-navigation department will have administrative rights for the DMA organization inside the Identity Registry. As noted earlier, these rights only apply inside the Identity Registry. Other services must create a similar setup with mapping of roles and permissions.
 
 Brokered User Federation
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -33,6 +114,7 @@ Since the authentication process is the responsibility of the organizations, it 
 
 What MCC governs in MIR
 ^^^^^^^^^^^^^^^^^^^^^^^
+* :ref:`MCP namespace <mcp-mrn>`
 * :ref:`MCP types and its hierarchy <mcp-type>`
 * :ref:`PKI certificate profile <mcp-pki-cert-profile>`
 * :ref:`OIDC Token <mcp-token>`

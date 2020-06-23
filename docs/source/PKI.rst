@@ -26,6 +26,8 @@ MCP Certificate
 ---------------
 MCP can issue X.509 certificates for the users which can then be used for authentication. Service providers relying on X.509 certificate authentication must obtain and install MCP root certificate into their webservice.
 
+Please note that the use of *MCP MRN* and *MRN* is based on :ref:`MCP namespace <mcp-mrn>` excluding *Subsidiary MRN*.
+
 The standard information present in an X.509 certificate includes:
 
 * **Version** – which X.509 version applies to the certificate (which indicates what data the certificate must include)

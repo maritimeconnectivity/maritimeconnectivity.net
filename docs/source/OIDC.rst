@@ -20,6 +20,8 @@ Keycloak is an open source product developed by RedHat. Keycloak can be set up t
 
 MCP token
 ^^^^^^^^^
+The first thing you should keep in mind is that the use of *mrn* and *org* in this chapter is based on :ref:`MCP namespace <mcp-mrn>`.
+
 MCP expects the following attributes in the OpenID Connect JWT Access Token:
 
 +--------------------+-----------------------------------------------------------------------------------------+

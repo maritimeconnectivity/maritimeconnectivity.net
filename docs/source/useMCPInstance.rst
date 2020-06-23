@@ -2,11 +2,12 @@
 
 Using MCP instance
 ==================
-There is two contexts of the usage of MCP instances, MCC MCP testbed and MCP Instance Provider's instance.
-Primary purpose of MCC MCP testbed is assessing new release of reference implementation and its impact to existing services.
+There are two contexts of the usage of MCP instances, MCC MCP testbed and MCP Instance Provider's instances.
+Primary purpose of MCC MCP testbed is assessing new release of reference implementation and its impact to existing test services.
+All entities including the services in the testbed will not be acknowledged as MCP entities.
 
 It is strongly recommended to use MCP Instance Provider's instance if the reader considers to consume or provide MCP services in operational purpose. (Please refer to the :ref:`List of MCP Instance Providers <mcp-instance-provider-list>`)
-Enrollment of the MCC MCP testbed as an organization is free and open while that of MCP Instance Provider's instance depends on the enrollment policy set by each MCP Instance Provider.
+Enrollment of the MCC MCP testbed as an organization is free and open while that of MCP Instance Provider's instance depends on the policy set by each MCP Instance Provider.
 
 .. _mcp-instance-usage-testbed:
 
@@ -35,9 +36,9 @@ Users of the MCC MCP testbed will go through a very simple validation process.
 Once your organization has been approved you will have access to services in the environment you applied.
 Any relevant organization is invited to join the testbed by applying through the management portal of following instances:
 
-  * `test environment <https://test-management.maritimecloud.net/#/apply>`__.
-  * `staging environment <https://staging-management.maritimecloud.net/#/apply>`__.
-  * `public test environment <https://management.maritimecloud.net/#/apply>`__.
+  * `test environment <https://test-management.maritimecloud.net/#/apply>`__
+  * `staging environment <https://staging-management.maritimecloud.net/#/apply>`__
+  * `public test environment <https://management.maritimecloud.net/#/apply>`__
 
 Please refer the manual of the management portal here: https://manual.maritimeconnectivity.net/
 
@@ -61,4 +62,11 @@ MCP testbed use cases
 
 Using MCP Instance Provider
 ---------------------------
-Please refer the policy of the MCP Instance Provider you want to apply. (Please refer to the :ref:`List of MCP Instance Providers <mcp-instance-provider-list>`)
+MCC will provide the criteria and the procedure on vetting of organizations in MCP Instance Provider and the guideline how an MCP Instance Provider handle MCP entities.
+Please refer the policy of the MCP Instance Provider you want to apply (:ref:`List of MCP Instance Providers <mcp-instance-provider-list>`).
+
+MCP Instance Provider use cases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* use of identity management or certificate case
+* use of service consumer case
+* use of service provider case

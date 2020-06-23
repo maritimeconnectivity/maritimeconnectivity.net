@@ -44,7 +44,7 @@ An organization which takes responsibility of operating two (staging and product
 
 MCP service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A digital service which is registered in an MSR and has submitted three documents of IALA's G1128 e-Navigation technical service specification guideline to the MSR.
+A digital service which is registered in an MSR (not from the MCC MCP testbed) and has submitted three documents of IALA's G1128 e-Navigation technical service specification guideline to the MSR.
 
 MCP portal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,23 +54,23 @@ Key actor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Maritime entities which needs to be authenticate for access right, is not both public and security related, and interact with the identity registry.
 
-Organization
+Organization (as MCP entity type)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 An organization is an entity, such as an institution, company or an association that has a collective goal and is linked to an external environment. Examples, include international organizations such as IMO, IALA, and IHO. National authorities such as US Coastguard, Swedish Maritime Administration. Local authorities such as VTS-Oeresund, Port of Rotterdam, Hong Kong SAR. Or commercial companies such as Transas or Maris.
 
-User
+User (as MCP entity type)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Users mainly refers to human users. Human users differ from other actors in that they typically use a username/password to login which implies a different interaction pattern with the identity registry then say communication between vessels.
 
-Device
+Device (as MCP entity type)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Devices can be any number of entities that is not covered by the other entity types. It could for example be a lighthouse, an ECDIS or a server that needs to be able to authenticate itself. For example an ECDIS system.
 
-Service
+Service (as MCP entity type)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Services refers to digital services, as described above. For example, a weather service that is available to other services for machine to machine communication. Services needs to be registered in such a way that it can successfully authenticate users.
 
-Vessel
+Vessel (as MCP entity type)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Vessels describes any floating object used for the carriage of people or goods. The main need for registering vessels in the Maritime Connectivity Platform is so that digital authentication certificates can be issued for them. Thereby enabling secure communication between vessels as well as digitally signing of documents. Users might also use these authentication certificates for other purposes. The important thing is that the functionality is there. As part of the authentication certificate of a vessel its name, MMSI number, IMO number, call sign and possible other attributes is included in the header of the authentication certificate
 
@@ -80,7 +80,7 @@ The set of attributes that uniquely identifies a security principal. A security 
 
 MCP entity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-An entity registered at some MIR instance.
+An entity registered at an MIR instance (not including the MCC MCP testbed).
 
 Maritime Resource Name (MRN)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

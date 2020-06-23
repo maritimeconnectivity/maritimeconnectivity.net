@@ -2,7 +2,7 @@
 
 MCP entity type
 ===============
-In order to be able to describe some of the concepts we are working with, here is a short introduction of the various actors we envision will interact with the identity registry.
+In order to be able to describe some of the concepts we are working with, here is a short introduction of the various entities we envision will interact with the identity registry.
 
 Identity management and security is a very complex and comprehensive field. So wherever possible we must limit non-essential functionality. So clearly, there are some maritime entities that should not be a part of the identity registry. Therefore, the Identity Registry should not be:
 
@@ -13,6 +13,8 @@ The main reason for excluding all but non-essential security related information
 If we make a generalized information store that maintains and provides query capabilities for all kinds of information about users and systems/devices.
 For example, business addresses, geographical location. We might as well use this functionality for storing other queryable information.
 For example, maintaining information about routes or cargo.
+
+The MCP entity type is defined and used in the :ref:`MCP namespace <mcp-mrn>` as *<MCP-TYPE>*.
 
 The internal identity management system is built of a hierarchy with organizations on top, that can have different types of entities (except organization) them, where one entity can only belong to one organization.
 
