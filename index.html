@@ -88,7 +88,7 @@
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <h1>Maritime Connectivity Platform</h1>
-                        <h3>Maritime Connectivity Platform (MCP) is a communication framework enabling efficient, secure, reliable and seamless electronic information exchange between all authorized maritime stakeholders across available communication systems.</h3>
+                        <h3>Welcome to the webpage of the Maritime Connectivity Platform (MCP) and the MCP consortium (MCC). On this site you will find all relevant information about the MCP, including official documents defining the MCP and all procedures relating to the MCP and the MCC.</h3>
                         <hr class="intro-divider">
                         <!--<ul class="list-inline intro-social-buttons">
                             <li>
@@ -121,16 +121,17 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading"><a name="new_released_documents">Newly released documents</a></h2>
-                    <p class="lead">At the General Assembly of the consortium held on the 11th of December 2020, the following public documents were released:</p>
-                    <p class="lead"> <a href="docs/mcp-idsec-1-overview.pdf" target="_blank">Identity Management and Security: General Approach and Basic Requirements</a></p>
-                    <p class="lead"> <a href="docs/mcp-idsec-2-ID.pdf" target="_blank">Identity Management and Security: Identity Management (the MCP usage of Maritime Resource Names, MRN)</a></p>
-                    <p class="lead"> <a href="docs/mcp-idsec-3-PKI.pdf" target="_blank">Identity Management and Security: Public Key Infrastructure (PKI)</a></p>
-                    <p class="lead"> <a href="docs/mcp-idsec-4-AUTH.pdf" target="_blank">Identity Management and Security: Authentication and Authorisation for Web Services</a></p>
+                    <h2 class="section-heading"><a name="new_released_documents">News June 2021</a></h2>
+                    <p class="lead">At the 4th General Assembly of the MCP Consortium held in June 2021, documents defining the criteria for being an MCP identity service provider were adopted. This is a very big milestone for the consortium, and the next step will be to officially endorse organisations to be such. The first organisation expected to be endorsed is the <a href="http://www.navelink.org" target="_blank">Navelink Consortium</a>. </p>
+                    <p class="lead">The MCP Consortium is now focusing on making similar definitions for being service providers of MSR (Maritime Service Registry) and MMS (Maritime Messaging Service).
+                  </p>
+                    <p class="lead">The following documents define the criteria for being an MCP identity service provider:</p>
+                    <p class="lead"> <a href="docs/MCP Gen4 Requirements for MCP identity service providers.pdf" target="_blank">Requirements for MCP identity service providers (high level description, making references to the more specific documents below)</a></p>
+                    <p class="lead"> <a href="docs/MCP IDsec1 MCC Identity Management and Security; General Approach and Basic Requirements.pdf" target="_blank">Identity Management and Security: General Approach and Basic Requirements</a></p>
+                    <p class="lead"> <a href="docs/MCP IDsec2 MCC Identity Management and Security; Identity Management.pdf" target="_blank">Identity Management and Security: Identity Management (the MCP usage of Maritime Resource Names, MRN)</a></p>
+                    <p class="lead"> <a href="docs/MCP IDsec3 MCC Identity Management and Security; Public Key Infrastructure (PKI).pdf" target="_blank">Identity Management and Security: Public Key Infrastructure (PKI)</a></p>
+                    <p class="lead"> <a href="docs/MCP IDsec4 MCC Identity Management and Security; Authentication and Authorization for Web Services.pdf" target="_blank">Identity Management and Security: Authentication and Authorisation for Web Services</a></p>
                     <p class="lead"> <a href="docs/MCC vetting procedures.pdf" target="_blank">Vetting procedure for MCP instance providers</a></p>
-                    <p class="lead">The documents on Identity Management and Security are mainly updates to the previous document on this topic, which is now split into several documents. These document include updated descriptions on the decentralised PKI and authentication and authorisation for web services. The vetting procedures are new, and described the procedure for vetting new organisations that are enrolled in MCP MIR instances.</p>
-                    <p class="lead">The next general assembly is scheduled for June 2021, and at this stage it is expected that a full description of criteria for running a MIR instance will be in place. Also considerably progress on the service registry and messaging service is expected.</p>
-
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <!--<img class="img-responsive" src="img/ipad.png" alt="">-->
@@ -154,18 +155,22 @@
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <!--<hr class="section-heading-spacer">-->
                     <div class="clearfix"></div>
-                    <h2 class="section-heading"><a name="core_components">The Core Components of<br/>MCP</a></h2>
+                    <h2 class="section-heading"><a name="core_components">The MCP</a></h2>
                     <p class="lead">
+                      <p>The MCP is a decentralised platform that facilitates secure and reliable information exchange within the maritime domain and beyond. "Beyond", because the maritime world isn’t isolated, but needs to exchange information with other domains - for instance with other transport domains. The information exchanged can be of almost any nature, ranging from private confidential information between a vessel and the shore office of the shipowner, to public information provided by authorities, such as the provision of navigational warnings.</p>
+                      <p>As a decentralised platform, there is no single entity operating this. Several organisations are MCP service providers, and collectively they form “the Maritime Connectivity Platform”.</p>
+
                         <h4>Maritime Identity Registry</h4>
-                        <p>For secure and reliable identity information, it provides a single login to all services, using identity information provided by trusted stakeholders.</p>
+                        <p>For secure and reliable identity information the MIR provides a unified means of authentication using identity information provided by trusted stakeholders.</p>
                         <h4>Maritime Service Registry</h4>
-                        <p>For registering, discovering and using all relevant e-Navigation and e-Maritime services, commercial and non-commercial, authorised and non-authorised, for free and against payment. It can be seen as a sophisticated yellow pages phone book or the equivalent of an App Store.</p>
+                        <p>The MSR can be used for registering, discovering and using all relevant e-Navigation and e-Maritime services, commercial and non-commercial, authorised and non-authorised, for free and against payment. It can be seen as a sophisticated yellow pages phone book.</p>
                         <h4>Maritime Messaging Service</h4>
-                        <p>An information broker that intelligently exchanges information between communication systems connected to the cloud, taking into account the current geographical position and communication links available to the recipient.</p>
-                        All the core components are Open Source and available in <a href="https://github.com/maritimeconnectivity/" target="_blank">our GitHub repositories</a>.
+                        <p>An information broker that intelligently exchanges information between different communication systems, taking into account the current geographical position and communication links available to the recipient.</p>
+                        All the core components of the MCP are Open Source and available in <a href="https://github.com/maritimeconnectivity/" target="_blank">our GitHub repositories</a>. The source code for the MSR and MMS are still - work in progress, but the MIR is an up-to-date reference implementation aligned with the criteria for being an MCP identity service provider.
                     </p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                  <h2 class="section-heading"><a name="core_components">Core components of the MCP</a></h2>
                     <img class="img-responsive" src="img/mc-core-components.png" alt="">
                 </div>
             </div>
@@ -187,10 +192,7 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading"><a name="mcp_governance">MCP Governance</a></h2>
                     <p class="lead">
-                        The MCP is governed by the MCP consortium (MCC). The MCP consortium was established on 8th of February 2019. Press release for the establishment of the MCC can be found here:
-                    </p>
-                    <p class="lead">
-                        <a href="docs/Press_release.pdf" target="_blank">Consortium establishment press release</a>
+                        The MCP is governed by the MCP consortium (MCC). The MCP consortium was established on 8th of February 2019.
                     </p>
                     <p class="lead">
                         The MCC governs the standards relating to MCP, including the MCP source code. The MCC operates a testbed for MCP (done by a member on behalf of the consortium), but does not operate an operational instance of the MCP. Rather, the MCC authorises other organisations to run operational instances of the MCP.
@@ -198,6 +200,9 @@
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/consortium.jpg" alt="">
+                    <p class="lead">
+                        From the innaguration of the MCP consortium onboard M/S Pearl Seaways during the conference - e-Navigation Underway International 2019
+                    </p>
                 </div>
                 <div class="col-lg-10 col-sm-6">
                     <p class="lead">
@@ -219,6 +224,7 @@
                     <p class="lead">
                         The terms of the consortium can be found in the consortium arrangement document, which can be found <a href="docs/Consortium_arrangement_1-1-1_clean.pdf" target="_blank">here</a>.
                     </p>
+                    <h4>New members</h4>
                     <p class="lead">
                         All other relevant organisations (non-profit and for-profit) are invited to join the consortium.<br/>
                         Apply for membership by filling the <a href="docs/MCC application-1.pdf" target="_blank">application form</a> and send the filled application to the <a href="mailto:mcc@dmc.international">secretariat</a>.
@@ -275,12 +281,8 @@
                     <p class="lead">
                         If you wish to dive into the technical information this is where you should start.<br/>
                         <ul>
-                            <li>A <a href="http://manual.maritimeconnectivity.net" target="_blank">manual for the MCP Management Portal</a> is available.</li>
-			                <li>A high-level description of the Maritime Messaging Service (MMS) can be found <a href="docs/MMS_Specification_0.8.3.pdf" target="_blank">here</a>.</li>
-                            <li>For developers there is <a href="https://docs.maritimeconnectivity.net" target="_blank">online documentation</a> describing how Maritime Identity Registry and Maritime Service Registry works.</li>
-                            <li>If you have a service you wish to make available in MCP, you must document it according to the MCP Service Specification. Please refer to the <a href="docs/Service_Documentation_Guidelines.pdf" target="_blank">guide</a> for how to fill out the templates for <a href="docs/Service_Specification_Template.docx" target="_blank">service specification</a>, <a href="docs/Service_Design_Description_Template.docx" target="_blank">service design</a> and <a href="docs/Service_Instance_Description_Template.docx" target="_blank">service instance</a>. As is evident in the document, the guideline is identical the IALA guideline 1128. The MCP will at all times follow this guideline, and the MCC will seek to influence updates of this IALA guideline if it deems appropriate.</li>
-                            <li>For integrating directly with APIs there are Swagger/OpenAPI specifications available for <a href="https://api.maritimeconnectivity.net/v2/api-docs" target="_blank">Maritime Identity Registry API</a> and <a href="https://sr.maritimeconnectivity.net/v2/api-docs" target="_blank">Maritime Service Registry API</a>.</li>
-                            <li>Description of environments and release management <a href="docs/environments and release management.pdf" target="_blank">Environments and release management</a>.</li>
+                            <li>For developers there is <a href="https://docs.maritimeconnectivity.net" target="_blank">online documentation</a> describing the technical details of the MCP. Again, information relating to MIR is more up-to-date than the other components.</li>
+                            <li>If you have a service you wish to make available in MCP, you must document it according to the MCP Service Specification. Please refer to the <a href="docs/Service_Documentation_Guidelines.pdf" target="_blank">guide</a> for how to fill out the templates for <a href="docs/Service_Specification_Template.docx" target="_blank">service specification</a>, <a href="docs/Service_Design_Description_Template.docx" target="_blank">service design</a> and <a href="docs/Service_Instance_Description_Template.docx" target="_blank">service instance</a>. As is evident in the document, the guideline is identical to the IALA guideline 1128. The MCP will at all times follow this guideline, and the MCC will seek to influence updates of this IALA guideline if deemed appropriate.</li>
                             <li>For updates, release information, discussions and questions concerning MCP, please use our <a href="https://mcp.discourse.group" target="_blank">Discourse forum</a>.</li>
                         </ul>
                         <!--<h4>Legacy documentation</h4>
@@ -312,16 +314,12 @@
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading"><a name="mcp_instances">MCP Instances</a></h2>
+                    <h2 class="section-heading"><a name="mcp_instances">MCP Service providers</a></h2>
                     <p class="lead">
-                        There are currently no fully compliant instances of MCP - since the final specifications for MCP are still in the process of being developed. However, two organisations are currently setting up instances that will be MCP compliant:
-                        <ul>
-                            <li><a href="https://www.navelink.org/" target="_blank">The Navelink Industry Consortium</a></li>
-                            <li>The Ministry of Ocean and Fisheries (Korea), through the <a href="https://www.smartnav.org/eng/html/Index_New/" target="_blank">SMART Navigation project</a></li>
-                        </ul>
+                            As MCP service providers become endorsed by the MCC, they will be listed here. As mentioned above, the first organisation envisioned to be such is the Navelink consortium.
                     </p>
                     <p class="lead">
-                        In addition to this, the MCC operates (through two of its members, KRISO and Frequentis) an MCP test-instance compromising three environments (test, staging, and public test environment). Any relevant organisation is invited to join this testbed by applying through the management portal of the public test environment <a href="https://management.maritimeconnectivity.net" target="_blank">here</a>.<br>
+                        In addition to this, the MCC operates (through two of its members, KRISO and Frequentis) an MCP testbed compromising three environments (test, staging, and public test environment). Any relevant organisation is invited to join this testbed by applying through the management portal of the public test environment <a href="https://management.maritimeconnectivity.net" target="_blank">here</a>.<br>
                     </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
